@@ -1,0 +1,12 @@
+numpy
+pandas
+rdkit
+torch
+tqdm
+typing-extensions
+typed-argument-parser
+tensorboardX
+scikit-learn
+hyperopt
+requests
+FPSim2
