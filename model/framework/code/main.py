@@ -16,12 +16,6 @@ from predictors.utilities.utilities import addMolsKekuleSmilesToFrame
 input_file = sys.argv[1]
 output_file = sys.argv[2]
 
-
-# my model
-# def my_model(smiles_list):
-#     return [MolWt(Chem.MolFromSmiles(smi)) for smi in smiles_list]
-
-# predict function for calculating the probability values and model stability
 def predict_df(
     smiles_list, 
     smi_column_name='smiles', 

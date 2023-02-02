@@ -1,4 +1,4 @@
-name: sol
+name: eos74bo
 dependencies:
   - python=3.7
   - pip=20.0
@@ -6,7 +6,8 @@ dependencies:
     - numpy
     - pandas
     - rdkit
-    - torch
+    - torch==1.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+    - FPSim2
     - tqdm
     - typing-extensions
     - typed-argument-parser
@@ -14,4 +15,3 @@ dependencies:
     - scikit-learn
     - hyperopt
     - requests
-    - FPSim2

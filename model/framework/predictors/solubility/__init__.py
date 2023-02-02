@@ -8,7 +8,10 @@ solubility_model_file_path = os.path.abspath(os.path.join(root, '../../../checkp
 
 print(f'Loading Solubility graph convolutional neural network model', file=sys.stdout)
 os.makedirs('../../../checkpoints', exist_ok=True)
-solubility_gcnn_scaler, solubility_gcnn_model, solubility_gcnn_model_version = load_gcnn_model_with_versioninfo(solubility_model_file_path, solubility_model_file_url)
+solubility_gcnn_scaler, solubility_gcnn_model, solubility_gcnn_model_version = load_gcnn_model_with_versioninfo(
+    solubility_model_file_path, 
+    solubility_model_file_url
+    )
 
 del solubility_model_file_url
 del solubility_model_file_path
