@@ -4,7 +4,7 @@
     "Status": "In progress",
     "Title": "Aqueous Kinetic Solubility",
     "Description": "Prediction of Aqueous solubility is one of the most important properties in drug discovery, as it has profound impact on various drug properties, including biological activity, pharmacokinetics (PK), toxicity, and in vivo efficacy.",
-    "Mode": "Pretrained",
+    "Mode": ["Pretrained"],
     "Task": ["Classification"],
     "Input": ["Compound"],
     "Input Shape": "Single",
