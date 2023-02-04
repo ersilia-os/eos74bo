@@ -32,9 +32,6 @@ Note: Ensure that the Docker service is running.
 
 #
 ### **With conda**
-This can be done in 2 ways.
-
-**Option 1**
 1. Open your Anaconda terminal
 2. Create environment
     ```
@@ -48,16 +45,3 @@ This can be done in 2 ways.
 4. Change directory to model/checkpoints
 5. Type `python main.py ../input.csv ../<outout-file>.csv` and hit Enter
 6. To close the application, hit `Ctrl + c` or `Cmd + c` in the Terminal and then type `conda deactivate` and hit Enter to close the conda environment
-
-**Option 2**
-1. Open your Anaconda terminal
-2. Create environment
-    ```
-    conda env create <name-of-env> python=3.7
-    ```
-    - Wait for the envitonment to be created
-3. Type `conda activate <name-of-env>` and hit Enter
-4. Run the `pip install -r requirements.txt` command
-5. Change directory to model/checkpoints
-6. Type `python main.py ../input.csv ../<outout-file>.csv` and hit Enter
-7. To close the application, hit `Ctrl + c` or `Cmd + c` in the Terminal and then type `conda deactivate` and hit Enter to close the conda environment
