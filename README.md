@@ -2,7 +2,7 @@
 
 ## **Model identifiers**
 - Slug: solubility
-- Ersilia ID: eos5505
+- Ersilia ID: eos74bo
 - Tags: solubility
 #
 ## **Model description**
