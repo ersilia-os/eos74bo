@@ -3,7 +3,7 @@ import sys
 root = os.path.dirname(os.path.abspath(__file__))
 # from ..utilities.utilities import load_gcnn_model_with_versioninfo
 
-sys.path.insert(0, '..')
+sys.path.insert(0, '../predictors')
 from utilities.utilities import load_gcnn_model_with_versioninfo
 
 solubility_model_file_url = os.path.abspath(os.path.join(root, '../../../checkpoints/gcnn_model.pt'))
