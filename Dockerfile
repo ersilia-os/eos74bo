@@ -1,7 +1,6 @@
 FROM bentoml/model-server:0.11.0-py37
 MAINTAINER ersilia
 
-RUN pip install python==3.8
 RUN pip install rdkit
 RUN pip install numpy
 RUN pip install pandas
