@@ -1,9 +1,9 @@
 name: eos
 channels:
-  - pytorch
+  # - pytorch
   # - efelix
-  - conda-forge
-  - anaconda
+  # - conda-forge
+  # - anaconda
   - defaults
 dependencies:
   - python=3.8
