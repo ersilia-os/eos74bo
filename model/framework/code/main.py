@@ -7,9 +7,10 @@ import sys
 
 # current file directory
 root = os.path.dirname(os.path.abspath(__file__))
+print(root)
 sys.path.append('..')
 
-from predictors.solubility.solubility_predictor import SolubilityPredictor 
+from predictors.solubility.solubility_predictor import SolubilityPredictor
 from predictors.utilities.utilities import addMolsKekuleSmilesToFrame 
 
 # parse arguments
