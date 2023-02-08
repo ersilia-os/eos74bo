@@ -1,0 +1,827 @@
+Sample model id selected: eos74bo
+20:05:52 | DEBUG    | Repo path specified: .
+20:05:52 | DEBUG    | Absolute path: /home/runner/work/eos74bo/eos74bo
+⬇️  Fetching model eos74bo: aqueous-kinetic-solubility
+
+  0%|          | 0/8 [00:00<?, ?it/s]20:05:52 | INFO     | GitHub CLI is not installed. Ersilia can work without it, but we highy recommend that you install this tool.
+20:05:52 | DEBUG    | Git LFS is installed
+Updated Git hooks.
+20:05:52 | DEBUG    | Git LFS has been activated
+Git LFS initialized.
+20:05:52 | DEBUG    | Connected to the internet
+20:05:52 | DEBUG    | Conda is installed
+20:05:52 | DEBUG    | EOS Home path exists
+
+ 12%|█▎        | 1/8 [00:00<00:01,  6.50it/s]
+                                             
+
+ 12%|█▎        | 1/8 [00:00<00:01,  6.50it/s]20:05:52 | INFO     | Starting delete of model eos74bo
+20:05:53 | INFO     | Deleting conda environment eos74bo
+20:05:54 | DEBUG    | Deleting /home/runner/eos/isaura/lake/eos74bo_local.h5
+20:05:54 | DEBUG    | Deleting /home/runner/eos/isaura/lake/eos74bo_public.h5
+20:05:54 | INFO     | Removing docker images and stopping containers related to eos74bo
+Deleted Containers:
+e5ca5efa85f89c22152178cd35f2232abc5124c24359da52a096dab832e27fef
+
+Total reclaimed space: 0B
+20:05:57 | DEBUG    | Running docker images > /tmp/ersilia-pg4c2929/docker-images.txt
+20:05:57 | DEBUG    | Model entry eos74bo was not available in the fetched models registry
+20:05:57 | SUCCESS  | Model eos74bo deleted successfully
+
+ 25%|██▌       | 2/8 [00:05<00:19,  3.18s/it]
+                                             
+
+ 25%|██▌       | 2/8 [00:05<00:19,  3.18s/it]
+                                             
+
+ 38%|███▊      | 3/8 [00:05<00:15,  3.18s/it]20:05:57 | DEBUG    | Check if model can be run with vanilla (system) code (i.e. dockerfile has no installs)
+20:05:57 | DEBUG    | Check bentoml and python version
+20:05:57 | INFO     | BentoML version {'version': '0.11.0', 'slim': False, 'python': 'py37'}
+20:05:57 | DEBUG    | Custom Ersilia BentoML is used, no need for modifying protobuf version
+20:05:57 | DEBUG    | Model needs some installs
+20:05:57 | DEBUG    | Checking if only python/conda install will be sufficient
+20:05:57 | DEBUG    | Mode: conda
+20:05:57 | DEBUG    | Trying to remove path: /home/runner/bentoml/repository/eos74bo
+20:05:57 | DEBUG    | ...successfully
+20:05:57 | DEBUG    | ...but path did not exist!
+20:05:57 | DEBUG    | Initializing conda packer
+20:05:57 | DEBUG    | Packing model with Conda
+20:05:57 | DEBUG    | Writing install commands
+20:05:57 | DEBUG    | Run commands: ['pip install rdkit', 'pip install pandas']
+20:05:57 | DEBUG    | Writing install commands in /home/runner/eos/dest/eos74bo/model_install_commands.sh
+20:05:57 | DEBUG    | Setting up
+20:05:57 | DEBUG    | Installs file /home/runner/eos/dest/eos74bo/model_install_commands.sh
+20:05:57 | DEBUG    | Conda environment eos74bo
+20:05:58 | DEBUG    | Environment eos74bo does not exist
+20:05:59 | DEBUG    | eosbase-bentoml-0.11.0-py37 base environment does not exist
+20:05:59 | DEBUG    | Setting up base environment eosbase-bentoml-0.11.0-py37
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /usr/share/miniconda/envs/eosbase-bentoml-0.11.0-py37
+
+  added / updated specs:
+    - python=3.7
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    ca-certificates-2023.01.10 |       h06a4308_0         120 KB
+    certifi-2022.12.7          |   py37h06a4308_0         150 KB
+    ncurses-6.4                |       h6a678d5_0         914 KB
+    pip-22.3.1                 |   py37h06a4308_0         2.7 MB
+    python-3.7.16              |       h7a1cb2a_0        44.8 MB
+    setuptools-65.6.3          |   py37h06a4308_0         1.1 MB
+    sqlite-3.40.1              |       h5082296_0         1.2 MB
+    xz-5.2.10                  |       h5eee18b_1         429 KB
+    ------------------------------------------------------------
+                                           Total:        51.4 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu 
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2023.01.10-h06a4308_0 
+  certifi            pkgs/main/linux-64::certifi-2022.12.7-py37h06a4308_0 
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.38-h1181459_1 
+  libffi             pkgs/main/linux-64::libffi-3.4.2-h6a678d5_6 
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1 
+  libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1 
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1 
+  ncurses            pkgs/main/linux-64::ncurses-6.4-h6a678d5_0 
+  openssl            pkgs/main/linux-64::openssl-1.1.1s-h7f8727e_0 
+  pip                pkgs/main/linux-64::pip-22.3.1-py37h06a4308_0 
+  python             pkgs/main/linux-64::python-3.7.16-h7a1cb2a_0 
+  readline           pkgs/main/linux-64::readline-8.2-h5eee18b_0 
+  setuptools         pkgs/main/linux-64::setuptools-65.6.3-py37h06a4308_0 
+  sqlite             pkgs/main/linux-64::sqlite-3.40.1-h5082296_0 
+  tk                 pkgs/main/linux-64::tk-8.6.12-h1ccaba5_0 
+  wheel              pkgs/main/noarch::wheel-0.37.1-pyhd3eb1b0_0 
+  xz                 pkgs/main/linux-64::xz-5.2.10-h5eee18b_1 
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_0 
+
+
+
+Downloading and Extracting Packages
+
+ca-certificates-2023 | 120 KB    |            |   0% 
+
+setuptools-65.6.3    | 1.1 MB    |            |   0% 
+
+
+pip-22.3.1           | 2.7 MB    |            |   0% 
+
+
+
+python-3.7.16        | 44.8 MB   |            |   0% 
+
+
+
+
+xz-5.2.10            | 429 KB    |            |   0% 
+
+
+
+
+
+sqlite-3.40.1        | 1.2 MB    |            |   0% 
+
+
+
+
+
+
+certifi-2022.12.7    | 150 KB    |            |   0% 
+
+
+
+
+
+
+
+ncurses-6.4          | 914 KB    |            |   0% 
+
+setuptools-65.6.3    | 1.1 MB    | ######     |  60% 
+
+
+pip-22.3.1           | 2.7 MB    | #          |  10% 
+
+
+
+python-3.7.16        | 44.8 MB   | 1          |   1% 
+
+
+
+
+
+sqlite-3.40.1        | 1.2 MB    | 1          |   1% 
+
+
+
+
+
+
+certifi-2022.12.7    | 150 KB    | #          |  11% 
+
+
+
+
+
+
+
+ncurses-6.4          | 914 KB    | 1          |   2% 
+ca-certificates-2023 | 120 KB    | ########## | 100% 
+ca-certificates-2023 | 120 KB    | ########## | 100% 
+
+
+
+python-3.7.16        | 44.8 MB   | ##2        |  22% 
+
+
+
+python-3.7.16        | 44.8 MB   | #####      |  51% 
+
+
+
+
+xz-5.2.10            | 429 KB    | ########## | 100% 
+
+
+
+
+xz-5.2.10            | 429 KB    | ########## | 100% 
+
+
+
+python-3.7.16        | 44.8 MB   | #######    |  71% 
+
+setuptools-65.6.3    | 1.1 MB    | ########## | 100% 
+
+
+
+
+
+
+certifi-2022.12.7    | 150 KB    | ########## | 100% 
+
+
+
+
+
+
+certifi-2022.12.7    | 150 KB    | ########## | 100% 
+
+
+
+
+
+
+
+ncurses-6.4          | 914 KB    | ########## | 100% 
+
+
+
+
+
+
+
+ncurses-6.4          | 914 KB    | ########## | 100% 
+
+
+
+
+
+sqlite-3.40.1        | 1.2 MB    | ########## | 100% 
+
+
+
+
+
+sqlite-3.40.1        | 1.2 MB    | ########## | 100% 
+
+
+pip-22.3.1           | 2.7 MB    | ########## | 100% 
+
+
+pip-22.3.1           | 2.7 MB    | ########## | 100% 
+
+
+
+python-3.7.16        | 44.8 MB   | ########## | 100% 
+
+
+
+python-3.7.16        | 44.8 MB   | ########## | 100% 
+                                                     
+
+                                                     
+
+
+                                                     
+
+
+
+                                                     
+
+
+
+
+                                                     
+
+
+
+
+
+                                                     
+
+
+
+
+
+
+                                                     
+
+
+
+
+
+
+
+                                                     
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate eosbase-bentoml-0.11.0-py37
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+Collecting git+https://github.com/ersilia-os/bentoml-ersilia.git
+  Cloning https://github.com/ersilia-os/bentoml-ersilia.git to /tmp/pip-req-build-whwmenqr
+  Running command git clone --filter=blob:none --quiet https://github.com/ersilia-os/bentoml-ersilia.git /tmp/pip-req-build-whwmenqr
+  Resolved https://github.com/ersilia-os/bentoml-ersilia.git to commit a0f0040a1198e8f1704f0395e5d9ce328aaecf71
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting humanfriendly
+  Using cached humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+Collecting chardet
+  Using cached chardet-5.1.0-py3-none-any.whl (199 kB)
+Collecting flask
+  Using cached Flask-2.2.2-py3-none-any.whl (101 kB)
+Collecting tabulate
+  Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+Collecting alembic
+  Using cached alembic-1.9.3-py3-none-any.whl (210 kB)
+Collecting sqlalchemy-utils
+  Using cached SQLAlchemy_Utils-0.39.0-py3-none-any.whl (92 kB)
+Collecting protobuf<3.19,>=3.8.0
+  Downloading protobuf-3.18.3-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 23.8 MB/s eta 0:00:00
+Collecting prometheus-client
+  Using cached prometheus_client-0.16.0-py3-none-any.whl (122 kB)
+Collecting boto3
+  Using cached boto3-1.26.66-py3-none-any.whl (132 kB)
+Collecting requests
+  Downloading requests-2.28.2-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 22.8 MB/s eta 0:00:00
+Collecting numpy
+  Downloading numpy-1.21.6-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (15.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 104.9 MB/s eta 0:00:00
+Collecting psutil
+  Using cached psutil-5.9.4-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (280 kB)
+Collecting werkzeug
+  Using cached Werkzeug-2.2.2-py3-none-any.whl (232 kB)
+Collecting packaging
+  Using cached packaging-23.0-py3-none-any.whl (42 kB)
+Collecting sqlalchemy
+  Downloading SQLAlchemy-2.0.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 114.1 MB/s eta 0:00:00
+Collecting cerberus
+  Using cached Cerberus-1.3.4.tar.gz (63 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting multidict
+  Downloading multidict-6.0.4-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (94 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.8/94.8 kB 36.2 MB/s eta 0:00:00
+Collecting python-json-logger
+  Using cached python_json_logger-2.0.4-py3-none-any.whl (7.8 kB)
+Collecting docker
+  Using cached docker-6.0.1-py3-none-any.whl (147 kB)
+Collecting ruamel.yaml
+  Downloading ruamel.yaml-0.17.21-py3-none-any.whl (109 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.5/109.5 kB 41.3 MB/s eta 0:00:00
+Collecting Mako
+  Using cached Mako-1.2.4-py3-none-any.whl (78 kB)
+Collecting importlib-metadata
+  Downloading importlib_metadata-6.0.0-py3-none-any.whl (21 kB)
+Collecting importlib-resources
+  Downloading importlib_resources-5.10.2-py3-none-any.whl (34 kB)
+Collecting typing-extensions>=4.2.0
+  Using cached typing_extensions-4.4.0-py3-none-any.whl (26 kB)
+Collecting greenlet!=0.4.17
+  Downloading greenlet-2.0.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (566 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.1/566.1 kB 96.9 MB/s eta 0:00:00
+Collecting s3transfer<0.7.0,>=0.6.0
+  Using cached s3transfer-0.6.0-py3-none-any.whl (79 kB)
+Collecting botocore<1.30.0,>=1.29.66
+  Using cached botocore-1.29.66-py3-none-any.whl (10.4 MB)
+Collecting jmespath<2.0.0,>=0.7.1
+  Using cached jmespath-1.0.1-py3-none-any.whl (20 kB)
+Requirement already satisfied: setuptools in /usr/share/miniconda/envs/eosbase-bentoml-0.11.0-py37/lib/python3.7/site-packages (from cerberus->bentoml==0.11.0) (65.6.3)
+Collecting urllib3>=1.26.0
+  Downloading urllib3-1.26.14-py2.py3-none-any.whl (140 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.6/140.6 kB 49.4 MB/s eta 0:00:00
+Collecting websocket-client>=0.32.0
+  Using cached websocket_client-1.5.1-py3-none-any.whl (55 kB)
+Collecting charset-normalizer<4,>=2
+  Downloading charset_normalizer-3.0.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (170 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 170.5/170.5 kB 52.7 MB/s eta 0:00:00
+Collecting idna<4,>=2.5
+  Downloading idna-3.4-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.5/61.5 kB 27.1 MB/s eta 0:00:00
+Requirement already satisfied: certifi>=2017.4.17 in /usr/share/miniconda/envs/eosbase-bentoml-0.11.0-py37/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (2022.12.7)
+Collecting itsdangerous>=2.0
+  Using cached itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting click>=8.0
+  Using cached click-8.1.3-py3-none-any.whl (96 kB)
+Collecting Jinja2>=3.0
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting MarkupSafe>=2.1.1
+  Downloading MarkupSafe-2.1.2-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Collecting ruamel.yaml.clib>=0.2.6
+  Downloading ruamel.yaml.clib-0.2.7-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (500 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 500.1/500.1 kB 80.7 MB/s eta 0:00:00
+Collecting python-dateutil<3.0.0,>=2.1
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting zipp>=0.5
+  Downloading zipp-3.12.1-py3-none-any.whl (6.7 kB)
+Collecting six>=1.5
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Building wheels for collected packages: bentoml, cerberus
+  Building wheel for bentoml (pyproject.toml): started
+  Building wheel for bentoml (pyproject.toml): finished with status 'done'
+  Created wheel for bentoml: filename=bentoml-0.11.0-py3-none-any.whl size=665200 sha256=27de2f00e4b4644d40d8c5f4bf67352f34916920870ed4f817999e5dc73b1cd9
+  Stored in directory: /tmp/pip-ephem-wheel-cache-r7_qp_13/wheels/c5/ae/16/6ea4097c679d2e7a3a991c633003ec5b4e1c42a0a309fa2d9d
+  Building wheel for cerberus (pyproject.toml): started
+  Building wheel for cerberus (pyproject.toml): finished with status 'done'
+  Created wheel for cerberus: filename=Cerberus-1.3.4-py3-none-any.whl size=58193 sha256=28008257577371f30417e73c266b868d896ae6eef146a551291c886781f383b5
+  Stored in directory: /home/runner/.cache/pip/wheels/7a/93/69/463dbbac15e3c79384c92ec13f75d46b3e27034e2f764d9f85
+Successfully built bentoml cerberus
+Installing collected packages: charset-normalizer, zipp, websocket-client, urllib3, typing-extensions, tabulate, six, ruamel.yaml.clib, python-json-logger, psutil, protobuf, prometheus-client, packaging, numpy, multidict, MarkupSafe, jmespath, itsdangerous, idna, humanfriendly, greenlet, chardet, cerberus, werkzeug, ruamel.yaml, requests, python-dateutil, Jinja2, importlib-resources, importlib-metadata, sqlalchemy, Mako, docker, click, botocore, sqlalchemy-utils, s3transfer, flask, alembic, boto3, bentoml
+Successfully installed Jinja2-3.1.2 Mako-1.2.4 MarkupSafe-2.1.2 alembic-1.9.3 bentoml-0.11.0 boto3-1.26.66 botocore-1.29.66 cerberus-1.3.4 chardet-5.1.0 charset-normalizer-3.0.1 click-8.1.3 docker-6.0.1 flask-2.2.2 greenlet-2.0.2 humanfriendly-10.0 idna-3.4 importlib-metadata-6.0.0 importlib-resources-5.10.2 itsdangerous-2.1.2 jmespath-1.0.1 multidict-6.0.4 numpy-1.21.6 packaging-23.0 prometheus-client-0.16.0 protobuf-3.18.3 psutil-5.9.4 python-dateutil-2.8.2 python-json-logger-2.0.4 requests-2.28.2 ruamel.yaml-0.17.21 ruamel.yaml.clib-0.2.7 s3transfer-0.6.0 six-1.16.0 sqlalchemy-2.0.2 sqlalchemy-utils-0.39.0 tabulate-0.9.0 typing-extensions-4.4.0 urllib3-1.26.14 websocket-client-1.5.1 werkzeug-2.2.2 zipp-3.12.1
+20:06:31 | INFO     | Cloning base conda environment and adding model dependencies
+Source:      /usr/share/miniconda/envs/eosbase-bentoml-0.11.0-py37
+Destination: /usr/share/miniconda/envs/eos74bo
+Packages: 20
+Files: 5746
+
+Downloading and Extracting Packages
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate eos74bo
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+20:06:38 | DEBUG    | Run commandlines on eos74bo
+20:06:38 | DEBUG    | python -m pip --disable-pip-version-check install rdkit
+python -m pip --disable-pip-version-check install pandas
+python -m pip --disable-pip-version-check install git+https://github.com/ersilia-os/bentoml-ersilia.git
+
+20:06:39 | DEBUG    | Activating base environment
+20:06:39 | DEBUG    | Current working directory: /home/runner/eos/dest/eos74bo
+20:06:39 | DEBUG    | Running bash /tmp/ersilia-pw1kb9kj/script.sh > /tmp/ersilia-94g4ywml/command_outputs.log 2>&1
+20:06:53 | DEBUG    | # conda environments:
+#
+base                     /usr/share/miniconda
+eos74bo               *  /usr/share/miniconda/envs/eos74bo
+eosbase-bentoml-0.11.0-py37     /usr/share/miniconda/envs/eosbase-bentoml-0.11.0-py37
+
+Collecting rdkit
+  Downloading rdkit-2022.9.4-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.1/29.1 MB 9.8 MB/s eta 0:00:00
+Requirement already satisfied: numpy in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from rdkit) (1.21.6)
+Collecting Pillow
+  Downloading Pillow-9.4.0-cp37-cp37m-manylinux_2_28_x86_64.whl (3.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 115.4 MB/s eta 0:00:00
+Installing collected packages: Pillow, rdkit
+Successfully installed Pillow-9.4.0 rdkit-2022.9.4
+Collecting pandas
+  Downloading pandas-1.3.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 101.0 MB/s eta 0:00:00
+Requirement already satisfied: python-dateutil>=2.7.3 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from pandas) (2.8.2)
+Collecting pytz>=2017.3
+  Downloading pytz-2022.7.1-py2.py3-none-any.whl (499 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 499.4/499.4 kB 89.1 MB/s eta 0:00:00
+Requirement already satisfied: numpy>=1.17.3 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from pandas) (1.21.6)
+Requirement already satisfied: six>=1.5 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from python-dateutil>=2.7.3->pandas) (1.16.0)
+Installing collected packages: pytz, pandas
+Successfully installed pandas-1.3.5 pytz-2022.7.1
+Collecting git+https://github.com/ersilia-os/bentoml-ersilia.git
+  Cloning https://github.com/ersilia-os/bentoml-ersilia.git to /tmp/pip-req-build-fc9nz725
+  Running command git clone --filter=blob:none --quiet https://github.com/ersilia-os/bentoml-ersilia.git /tmp/pip-req-build-fc9nz725
+  Resolved https://github.com/ersilia-os/bentoml-ersilia.git to commit a0f0040a1198e8f1704f0395e5d9ce328aaecf71
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: docker in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (6.0.1)
+Requirement already satisfied: chardet in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (5.1.0)
+Requirement already satisfied: humanfriendly in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (10.0)
+Requirement already satisfied: protobuf<3.19,>=3.8.0 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (3.18.3)
+Requirement already satisfied: psutil in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (5.9.4)
+Requirement already satisfied: flask in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (2.2.2)
+Requirement already satisfied: numpy in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (1.21.6)
+Requirement already satisfied: sqlalchemy in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (2.0.2)
+Requirement already satisfied: python-json-logger in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (2.0.4)
+Requirement already satisfied: ruamel.yaml in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (0.17.21)
+Requirement already satisfied: alembic in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (1.9.3)
+Requirement already satisfied: werkzeug in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (2.2.2)
+Requirement already satisfied: tabulate in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (0.9.0)
+Requirement already satisfied: multidict in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (6.0.4)
+Requirement already satisfied: boto3 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (1.26.66)
+Requirement already satisfied: cerberus in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (1.3.4)
+Requirement already satisfied: prometheus-client in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (0.16.0)
+Requirement already satisfied: packaging in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (23.0)
+Requirement already satisfied: requests in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (2.28.2)
+Requirement already satisfied: sqlalchemy-utils in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from bentoml==0.11.0) (0.39.0)
+Requirement already satisfied: Mako in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (1.2.4)
+Requirement already satisfied: importlib-resources in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (5.10.2)
+Requirement already satisfied: importlib-metadata in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from alembic->bentoml==0.11.0) (6.0.0)
+Requirement already satisfied: typing-extensions>=4.2.0 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from sqlalchemy->bentoml==0.11.0) (4.4.0)
+Requirement already satisfied: greenlet!=0.4.17 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from sqlalchemy->bentoml==0.11.0) (2.0.2)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (1.0.1)
+Requirement already satisfied: botocore<1.30.0,>=1.29.66 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (1.29.66)
+Requirement already satisfied: s3transfer<0.7.0,>=0.6.0 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from boto3->bentoml==0.11.0) (0.6.0)
+Requirement already satisfied: setuptools in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from cerberus->bentoml==0.11.0) (65.6.3)
+Requirement already satisfied: urllib3>=1.26.0 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from docker->bentoml==0.11.0) (1.26.14)
+Requirement already satisfied: websocket-client>=0.32.0 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from docker->bentoml==0.11.0) (1.5.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (3.0.1)
+Requirement already satisfied: idna<4,>=2.5 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (3.4)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from requests->bentoml==0.11.0) (2022.12.7)
+Requirement already satisfied: click>=8.0 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (8.1.3)
+Requirement already satisfied: itsdangerous>=2.0 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (2.1.2)
+Requirement already satisfied: Jinja2>=3.0 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from flask->bentoml==0.11.0) (3.1.2)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from werkzeug->bentoml==0.11.0) (2.1.2)
+Requirement already satisfied: ruamel.yaml.clib>=0.2.6 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from ruamel.yaml->bentoml==0.11.0) (0.2.7)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from botocore<1.30.0,>=1.29.66->boto3->bentoml==0.11.0) (2.8.2)
+Requirement already satisfied: zipp>=0.5 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from importlib-metadata->alembic->bentoml==0.11.0) (3.12.1)
+Requirement already satisfied: six>=1.5 in /usr/share/miniconda/envs/eos74bo/lib/python3.7/site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.30.0,>=1.29.66->boto3->bentoml==0.11.0) (1.16.0)
+
+20:06:53 | DEBUG    | Activation done
+20:06:53 | DEBUG    | Creating environment YAML file
+20:06:54 | DEBUG    | Storing Conda environment in the local environment database
+20:06:54 | DEBUG    | Done with the Conda setup
+20:06:55 | DEBUG    | Using environment eos74bo
+20:06:55 | DEBUG    | Running command: python pack.py
+20:06:55 | DEBUG    | Run commandlines on eos74bo
+20:06:55 | DEBUG    | 
+        python pack.py
+        
+20:06:56 | DEBUG    | Activating base environment
+20:06:56 | DEBUG    | Current working directory: /home/runner/eos/dest/eos74bo
+20:06:56 | DEBUG    | Running bash /tmp/ersilia-9url8ljp/script.sh > /tmp/ersilia-gaur2fgv/command_outputs.log 2>&1
+20:06:59 | DEBUG    | # conda environments:
+#
+base                     /usr/share/miniconda
+eos74bo               *  /usr/share/miniconda/envs/eos74bo
+eosbase-bentoml-0.11.0-py37     /usr/share/miniconda/envs/eosbase-bentoml-0.11.0-py37
+
+[2023-02-08 20:06:58,893] INFO - BentoService bundle 'eos74bo:20230208200658_BD1F7E' saved to: /home/runner/bentoml/repository/eos74bo/20230208200658_BD1F7E
+
+20:06:59 | DEBUG    | Activation done
+20:06:59 | DEBUG    | Previous command successfully run inside eos74bo conda environment
+20:06:59 | DEBUG    | Now trying to establish symlinks
+20:06:59 | DEBUG    | BentoML location is /home/runner/bentoml/repository/eos74bo/20230208200658_BD1F7E
+20:06:59 | DEBUG    | Ersilia Bento location is /home/runner/eos/repository/eos74bo/20230208200658_BD1F7E
+20:06:59 | DEBUG    | Building symlinks between /home/runner/eos/repository/eos74bo/20230208200658_BD1F7E and /home/runner/bentoml/repository/eos74bo/20230208200658_BD1F7E
+20:06:59 | DEBUG    | Creating model symlink bundle artifacts > dest
+20:06:59 | DEBUG    | Creating model_install_commands.sh symlink dest <> bundle
+20:06:59 | INFO     | Could not create symbolic link from /home/runner/eos/dest/eos74bo/data.h5 to /home/runner/eos/isaura/lake/eos74bo_public.h5
+20:06:59 | DEBUG    | Run file found in framework: /home/runner/eos/repository/eos74bo/20230208200658_BD1F7E/eos74bo/artifacts/framework/run.sh
+20:06:59 | DEBUG    | Run commandlines on eos74bo
+20:06:59 | DEBUG    | which python > /tmp/ersilia-1p5f5syk/tmp.txt
+20:06:59 | DEBUG    | Activating base environment
+20:06:59 | DEBUG    | Current working directory: /home/runner/work/eos74bo/eos74bo
+20:06:59 | DEBUG    | Running bash /tmp/ersilia-w28o5rl2/script.sh > /tmp/ersilia-l2coj7qw/command_outputs.log 2>&1
+20:07:01 | DEBUG    | # conda environments:
+#
+base                     /usr/share/miniconda
+eos74bo               *  /usr/share/miniconda/envs/eos74bo
+eosbase-bentoml-0.11.0-py37     /usr/share/miniconda/envs/eosbase-bentoml-0.11.0-py37
+
+
+20:07:01 | DEBUG    | Activation done
+20:07:01 | DEBUG    | Python executable: /usr/share/miniconda/envs/eos74bo/bin/python
+20:07:01 | DEBUG    | Conda is needed
+
+ 50%|█████     | 4/8 [01:09<01:24, 21.14s/it]
+                                             
+
+ 50%|█████     | 4/8 [01:09<01:24, 21.14s/it]20:07:01 | DEBUG    | Checking if model needs to be integrated to a tool
+
+                                             
+
+ 62%|██████▎   | 5/8 [01:09<01:03, 21.14s/it]20:07:01 | DEBUG    | Getting model card of eos74bo
+20:07:01 | DEBUG    | Trying to get metadata from: /home/runner/eos/dest/eos74bo
+20:07:01 | DEBUG    | Card saved at /home/runner/eos/dest/eos74bo/card.json
+20:07:01 | DEBUG    | Saving slug aqueous-kinetic-solubility
+
+ 75%|███████▌  | 6/8 [01:09<00:22, 11.19s/it]
+                                             
+
+ 75%|███████▌  | 6/8 [01:09<00:22, 11.19s/it]20:07:01 | DEBUG    | Checking that autoservice works
+20:07:01 | DEBUG    | Setting AutoService for eos74bo
+20:07:01 | DEBUG    | No service class provided, deciding automatically
+20:07:01 | DEBUG    | No service class file exists in /home/runner/eos/repository/eos74bo/20230208200658_BD1F7E/service_class.txt
+20:07:01 | DEBUG    | Setting virtual environment at /home/runner/eos/dest/eos74bo
+20:07:02 | DEBUG    | Service class: conda
+20:07:02 | DEBUG    | Getting APIs from Bento
+20:07:02 | DEBUG    | Getting info from BentoML and storing in /tmp/ersilia-98nomli1/info.json
+20:07:03 | DEBUG    | Info {'name': 'eos74bo', 'version': '20230208200658_BD1F7E', 'created_at': '2023-02-08T20:06:58.805021Z', 'env': {'conda_env': 'name: bentoml-default-conda-env\nchannels:\n- defaults\ndependencies: []\n', 'python_version': '3.7.16', 'docker_base_image': 'bentoml/model-server:0.11.0-py37', 'pip_packages': ['bentoml==0.11.0']}, 'artifacts': [{'name': 'model', 'artifact_type': 'Artifact', 'metadata': {}}], 'apis': [{'name': 'run', 'input_type': 'JsonInput', 'docs': "BentoService inference API 'run', input: 'JsonInput', output: 'DefaultOutput'", 'output_config': {'cors': '*'}, 'output_type': 'DefaultOutput', 'mb_max_latency': 10000, 'mb_max_batch_size': 2000, 'batch': True}]}
+
+ 88%|████████▊ | 7/8 [01:11<00:08,  8.97s/it]
+                                             
+
+ 88%|████████▊ | 7/8 [01:11<00:08,  8.97s/it]20:07:03 | DEBUG    | Initializing model for inferring its structure
+20:07:03 | WARNING  | Lake manager 'isaura' is not installed! We strongly recommend installing it to store calculations persistently
+20:07:03 | ERROR    | Isaura is not installed! Calculations will be done without storing and reading from the lake, unfortunately.
+20:07:03 | DEBUG    | No status file exists
+20:07:03 | DEBUG    | Is fetched: False
+20:07:03 | DEBUG    | Schema not yet available
+20:07:03 | DEBUG    | Setting AutoService for eos74bo
+20:07:03 | DEBUG    | No service class provided, deciding automatically
+20:07:03 | DEBUG    | Service class file exists in folder /home/runner/eos/repository/eos74bo/20230208200658_BD1F7E/service_class.txt
+20:07:03 | DEBUG    | Service class: conda
+20:07:03 | DEBUG    | Model successfully initialized in sniffer
+20:07:03 | DEBUG    | No built-in example available. Generating a test one.
+20:07:03 | DEBUG    | Reading card from eos74bo
+20:07:03 | DEBUG    | Reading shape from eos74bo
+20:07:03 | DEBUG    | Input Shape: Single
+20:07:03 | DEBUG    | Input type is: compound
+20:07:03 | DEBUG    | Input shape is: Single
+20:07:03 | DEBUG    | Importing module: .types.compound
+20:07:03 | DEBUG    | Checking RDKIT and other requirements necessary for compound inputs
+Collecting rdkit-pypi
+  Downloading rdkit_pypi-2022.9.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.3/29.3 MB 34.2 MB/s eta 0:00:00
+Collecting Pillow
+  Downloading Pillow-9.4.0-cp310-cp310-manylinux_2_28_x86_64.whl (3.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 132.1 MB/s eta 0:00:00
+Requirement already satisfied: numpy in /usr/share/miniconda/lib/python3.10/site-packages (from rdkit-pypi) (1.24.2)
+Installing collected packages: Pillow, rdkit-pypi
+Successfully installed Pillow-9.4.0 rdkit-pypi-2022.9.4
+Collecting chembl_webresource_client
+  Downloading chembl_webresource_client-0.10.8-py3-none-any.whl (55 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.2/55.2 kB 4.3 MB/s eta 0:00:00
+Requirement already satisfied: urllib3 in /usr/share/miniconda/lib/python3.10/site-packages (from chembl_webresource_client) (1.26.13)
+Collecting easydict
+  Downloading easydict-1.10.tar.gz (6.4 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: requests>=2.18.4 in /usr/share/miniconda/lib/python3.10/site-packages (from chembl_webresource_client) (2.28.1)
+Collecting requests-cache~=0.7.0
+  Downloading requests_cache-0.7.5-py3-none-any.whl (39 kB)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/share/miniconda/lib/python3.10/site-packages (from requests>=2.18.4->chembl_webresource_client) (2022.12.7)
+Requirement already satisfied: charset-normalizer<3,>=2 in /usr/share/miniconda/lib/python3.10/site-packages (from requests>=2.18.4->chembl_webresource_client) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /usr/share/miniconda/lib/python3.10/site-packages (from requests>=2.18.4->chembl_webresource_client) (3.4)
+Collecting url-normalize<2.0,>=1.4
+  Downloading url_normalize-1.4.3-py2.py3-none-any.whl (6.8 kB)
+Requirement already satisfied: itsdangerous>=2.0.1 in /usr/share/miniconda/lib/python3.10/site-packages (from requests-cache~=0.7.0->chembl_webresource_client) (2.1.2)
+Requirement already satisfied: pyyaml>=5.4 in /usr/share/miniconda/lib/python3.10/site-packages (from requests-cache~=0.7.0->chembl_webresource_client) (6.0)
+Collecting attrs<22.0,>=21.2
+  Downloading attrs-21.4.0-py2.py3-none-any.whl (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 15.9 MB/s eta 0:00:00
+Requirement already satisfied: six in /usr/share/miniconda/lib/python3.10/site-packages (from url-normalize<2.0,>=1.4->requests-cache~=0.7.0->chembl_webresource_client) (1.16.0)
+Building wheels for collected packages: easydict
+  Building wheel for easydict (setup.py): started
+  Building wheel for easydict (setup.py): finished with status 'done'
+  Created wheel for easydict: filename=easydict-1.10-py3-none-any.whl size=6492 sha256=e60e9a040a7b08af46e0c189b9b30f6df853f1d83022ae9aa60d6412e2d13ff2
+  Stored in directory: /home/runner/.cache/pip/wheels/21/9b/57/0cd00a2b5410728375da2d48142d0974f5c40d26e742ab0a80
+Successfully built easydict
+Installing collected packages: easydict, url-normalize, attrs, requests-cache, chembl_webresource_client
+Successfully installed attrs-21.4.0 chembl_webresource_client-0.10.8 easydict-1.10 requests-cache-0.7.5 url-normalize-1.4.3
+20:07:09 | DEBUG    | InputShapeSingle shape: Single
+20:07:09 | DEBUG    | Inputs sampled: 2
+20:07:09 | DEBUG    | Sniffing model
+20:07:09 | DEBUG    | Getting model size
+20:07:09 | DEBUG    | Mode size is 83.95918273925781 MB
+20:07:09 | DEBUG    | Serving model
+20:07:09 | DEBUG    | Cleaning processes before serving
+20:07:09 | DEBUG    | Cleaning [] processes
+20:07:09 | DEBUG    | Cleaning temp dir
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-3340qaeb
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-g6m6u07m
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-w28o5rl2
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-do8b7fqb
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-ji0_sha_
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-j8q_o9fw
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-98nomli1
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-guugyn5t
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-l2coj7qw
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-xldcg_2c
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-hbujrx6x
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-4lil12ah
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-pg4c2929
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-m1jab7cm
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-gaur2fgv
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-1p5f5syk
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-px9rl_ow
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-7liupu59
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-caa3t63g
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-pw1kb9kj
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-nbpgorih
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-94g4ywml
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-bcfqpzhb
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-j4rot_7y
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-5mkal8lt
+20:07:09 | DEBUG    | Flushing temporary directory /tmp/ersilia-9url8ljp
+20:07:09 | DEBUG    | Cleaning temp dir
+20:07:09 | DEBUG    | Silencing docker containers if necessary
+20:07:11 | DEBUG    | Trying to serve model with BentoML locally
+20:07:11 | WARNING  | Port None was already in use. Using 44139 instead
+20:07:11 | DEBUG    | Free port: 44139
+20:07:11 | DEBUG    | Writing on /tmp/ersilia-xt8hggmx/serve.sh
+20:07:11 | DEBUG    | #!/bin/bash
+20:07:11 | DEBUG    | bentoml serve eos74bo:20230208200658_BD1F7E --port 44139 &> /tmp/ersilia-xt8hggmx/serve.log &
+20:07:11 | DEBUG    | _pid=$!
+20:07:11 | DEBUG    | echo "$_pid" > /tmp/ersilia-xt8hggmx/serve.pid
+20:07:11 | DEBUG    | Run command function available
+20:07:12 | DEBUG    | Running on conda environment eos74bo
+20:07:12 | DEBUG    | Run commandlines on eos74bo
+20:07:12 | DEBUG    | bash /tmp/ersilia-xt8hggmx/serve.sh
+20:07:13 | DEBUG    | Activating base environment
+20:07:13 | DEBUG    | Current working directory: /home/runner/work/eos74bo/eos74bo
+20:07:13 | DEBUG    | Running bash /tmp/ersilia-khb420j0/script.sh > /tmp/ersilia-ldv9_42r/command_outputs.log 2>&1
+20:07:14 | DEBUG    | # conda environments:
+#
+base                     /usr/share/miniconda
+eos74bo               *  /usr/share/miniconda/envs/eos74bo
+eosbase-bentoml-0.11.0-py37     /usr/share/miniconda/envs/eosbase-bentoml-0.11.0-py37
+
+
+20:07:14 | DEBUG    | Activation done
+20:07:14 | DEBUG    | Process id: 3901
+20:07:14 | DEBUG    | Trying to wake up. Iteration: 0
+20:07:14 | DEBUG    | Timeout: 1000 Sleep time: 1
+20:07:14 | DEBUG    | Temporary file available: /tmp/ersilia-xt8hggmx/serve.log
+20:07:14 | DEBUG    | No error strings found in temporary file
+20:07:14 | DEBUG    | Waiting for server
+20:07:15 | DEBUG    | Trying to wake up. Iteration: 1
+20:07:15 | DEBUG    | Timeout: 1000 Sleep time: 1
+20:07:15 | DEBUG    | Temporary file available: /tmp/ersilia-xt8hggmx/serve.log
+20:07:15 | DEBUG    | No error strings found in temporary file
+20:07:15 | DEBUG    | Server logging done
+20:07:16 | DEBUG    | Trying to wake up. Iteration: 2
+20:07:16 | DEBUG    | Timeout: 1000 Sleep time: 1
+20:07:16 | DEBUG    | Temporary file available: /tmp/ersilia-xt8hggmx/serve.log
+20:07:16 | DEBUG    | No error strings found in temporary file
+20:07:16 | DEBUG    | Server is ready. Trying to get URL
+20:07:16 | DEBUG    | URL found: http://127.0.0.1:44139
+20:07:16 | DEBUG    | Iterating over APIs
+20:07:16 | DEBUG    | Running API: run
+20:07:16 | DEBUG    | ['CC1C2C(CC3(C=CC(=O)C(=C3C2OC1=O)C)C)O', 'C1=CN=CC=C1C(=O)NN']
+20:07:16 | DEBUG    | API: run
+20:07:16 | DEBUG    | MODEL ID: eos74bo
+20:07:16 | DEBUG    | SERVICE URL: http://127.0.0.1:44139
+20:07:16 | DEBUG    | Reading card from eos74bo
+20:07:16 | DEBUG    | Reading shape from eos74bo
+20:07:16 | DEBUG    | Input Shape: Single
+20:07:16 | DEBUG    | Input type is: compound
+20:07:16 | DEBUG    | Input shape is: Single
+20:07:16 | DEBUG    | Importing module: .types.compound
+20:07:16 | DEBUG    | Checking RDKIT and other requirements necessary for compound inputs
+20:07:16 | DEBUG    | InputShapeSingle shape: Single
+20:07:16 | DEBUG    | API eos74bo:run initialized at URL http://127.0.0.1:44139
+20:07:16 | DEBUG    | Schema not yet available
+20:07:16 | INFO     | No empty output available
+20:07:16 | DEBUG    | Meta: None
+20:07:16 | DEBUG    | Posting to run
+20:07:16 | DEBUG    | Batch size 100
+20:07:16 | DEBUG    | Schema not yet available
+20:07:19 | DEBUG    | Status code: 500
+20:07:19 | ERROR    | Status Code: 500
+20:07:19 | WARNING  | Batch prediction didn't seem to work. Doing predictions one by one...
+20:07:23 | DEBUG    | Status code: 500
+20:07:23 | ERROR    | Status Code: 500
+20:07:26 | DEBUG    | Status code: 500
+20:07:26 | ERROR    | Status Code: 500
+20:07:26 | DEBUG    | Schema not yet available
+20:07:26 | DEBUG    | Done with unique posting
+20:07:26 | DEBUG    | Metadata needs to be calculated
+20:07:26 | ERROR    | Meta not available, run some adapations first and it will be inferred atomatically
+20:07:26 | DEBUG    | [{'input': {'key': 'LUHMMHZLDLBAKX-UHFFFAOYSA-N', 'input': 'CC1C2C(CC3(C=CC(=O)C(=C3C2OC1=O)C)C)O', 'text': 'CC1C2C(CC3(C=CC(=O)C(=C3C2OC1=O)C)C)O'}, 'output': None}, {'input': {'key': 'QRXWMOHMRWLFEY-UHFFFAOYSA-N', 'input': 'C1=CN=CC=C1C(=O)NN', 'text': 'C1=CN=CC=C1C(=O)NN'}, 'output': None}]
+20:07:28 | ERROR    | Ersilia exception class:
+EmptyOutputError
+
+Detailed error:
+Model API eos74bo:run did not produce an output/home/runner/eos/repository/eos74bo/20230208200658_BD1F7E/eos74bo/artifacts/framework/code
+Traceback (most recent call last):
+  File "/home/runner/eos/repository/eos74bo/20230208200658_BD1F7E/eos74bo/artifacts/framework/code/main.py", line 18, in <module>
+    from solubility.solubility_predictor import SolubilityPredictor
+ModuleNotFoundError: No module named 'solubility'
+
+
+Hints:
+- Visit the fetch troubleshooting site
+
+Checking setup: 0.154s
+Preparing model: 5.299762964248657s
+Getting model: 0.07651972770690918s
+Packing model: 63.56447124481201s
+Checking if model needs to be integrated to a tool: 0.0010488033294677734s
+Getting model card: 0.1621081829071045s
+Checking that autoservice works: 2.4107844829559326s
+🚨🚨🚨 Something went wrong with Ersilia 🚨🚨🚨
+
+Error message:
+
+Ersilia exception class:
+EmptyOutputError
+
+Detailed error:
+Model API eos74bo:run did not produce an output/home/runner/eos/repository/eos74bo/20230208200658_BD1F7E/eos74bo/artifacts/framework/code
+Traceback (most recent call last):
+  File "/home/runner/eos/repository/eos74bo/20230208200658_BD1F7E/eos74bo/artifacts/framework/code/main.py", line 18, in <module>
+    from solubility.solubility_predictor import SolubilityPredictor
+ModuleNotFoundError: No module named 'solubility'
+
+
+Hints:
+- Visit the fetch troubleshooting site
+
+If this error message is not helpful, open an issue at:
+ - https://github.com/ersilia-os/ersilia
+Or feel free to reach out to us at:
+ - hello[at]ersilia.io
+
+If you haven't, try to run your command in verbose mode (-v in the CLI)
+ - You will find the console log file in: /home/runner/eos/current.log
+Error: Process completed with exit code 1.

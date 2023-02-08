@@ -13,8 +13,8 @@ print(root)
 # from predictors.solubility.solubility_predictor import SolubilityPredictor
 # from predictors.utilities.utilities import addMolsKekuleSmilesToFrame 
 
-# sys.path.append('../predictors')
-sys.path.insert(0, '../predictors')
+sys.path.append('../predictors')
+# sys.path.insert(0, '../predictors')
 from solubility.solubility_predictor import SolubilityPredictor
 from utilities.utilities import addMolsKekuleSmilesToFrame 
 
