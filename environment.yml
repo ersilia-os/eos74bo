@@ -2,15 +2,14 @@ name: eos
 channels:
   # - pytorch
   # - efelix
-  # - conda-forge
-  # - anaconda
+  - conda-forge
   - defaults
 dependencies:
   - python=3.8
   - pip=20.0
   - pip:
     - numpy
-    - pandas
+    - pandas==1.5.3
     - rdkit
     - torch==1.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
     - torch
