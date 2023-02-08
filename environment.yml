@@ -1,7 +1,7 @@
 name: eos
 channels:
   - pytorch
-  - efelix
+  # - efelix
   - conda-forge
   - anaconda
   - defaults
