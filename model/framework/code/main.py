@@ -8,10 +8,17 @@ import sys
 # current file directory
 root = os.path.dirname(os.path.abspath(__file__))
 print(root)
-sys.path.append('..')
+# sys.path.append('../')
 
-from predictors.solubility.solubility_predictor import SolubilityPredictor
-from predictors.utilities.utilities import addMolsKekuleSmilesToFrame 
+# from predictors.solubility.solubility_predictor import SolubilityPredictor
+# from predictors.utilities.utilities import addMolsKekuleSmilesToFrame 
+
+# sys.path.append('../predictors')
+sys.path.insert(0, '../predictors')
+from solubility.solubility_predictor import SolubilityPredictor
+from utilities.utilities import addMolsKekuleSmilesToFrame 
+
+
 
 # parse arguments
 input_file = sys.argv[1]
