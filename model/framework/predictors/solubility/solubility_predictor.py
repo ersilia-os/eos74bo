@@ -6,8 +6,6 @@ import time
 
 import warnings
 warnings.filterwarnings('ignore')
-import sys
-sys.path.insert(0, '../chemprop')
 
 from . import solubility_gcnn_scaler, solubility_gcnn_model, solubility_gcnn_model_version
 from ..base.gcnn import GcnnBase
