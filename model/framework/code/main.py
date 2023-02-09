@@ -1,11 +1,15 @@
 # imports
 import pandas as pd
 import csv
+import os
 import sys
 from os import path
 
-sys.path.append('..')
+# sys.path.append('..')
 # sys.path.insert(0, '..')
+root = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(root, ".."))
+
 
 from predictors.solubility.solubility_predictor import SolubilityPredictor 
 from predictors.utilities.utilities import addMolsKekuleSmilesToFrame 
