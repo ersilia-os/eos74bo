@@ -10,8 +10,7 @@ import sys
 sys.path.insert(0, '../chemprop')
 
 from . import solubility_gcnn_scaler, solubility_gcnn_model, solubility_gcnn_model_version
-sys.path.insert(0, '..')
-from base.gcnn import GcnnBase
+from ..base.gcnn import GcnnBase
 
 
 class SolubilityPredictor(GcnnBase):
@@ -30,13 +29,7 @@ class SolubilityPredictor(GcnnBase):
             kekule_smiles (Array): numpy array of RDkit molecules
         """
 
-        GcnnBase.__init__(
-            self, 
-            kekule_smiles, 
-            column_dict_key='Predicted Class (Probability)', 
-            columns_dict_order = 1, 
-            smiles=smiles
-            )
+        GcnnBase.__init__(self, kekule_smiles, column_dict_key='Predicted Class (Probability)', columns_dict_order = 1, smiles=smiles)
 
         self._columns_dict['Prediction'] = {
             'order': 2,
