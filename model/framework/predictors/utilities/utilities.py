@@ -11,10 +11,9 @@ from datetime import datetime
 from rdkit import Chem
 from rdkit.Chem.rdchem import Mol
 
-import sys
-sys.path.insert(0, '../predictors/chemprop')
-from chemprop.utils import load_checkpoint, load_scalers
-from chemprop.args import InterpretArgs
+
+from chemprop.chemprop.utils import load_checkpoint, load_scalers
+from chemprop.chemprop.args import InterpretArgs
 from chemprop.interpret import interpret
 
 
