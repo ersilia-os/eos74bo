@@ -1,12 +1,6 @@
 FROM bentoml/model-server:0.11.0-py37
 MAINTAINER ersilia
 
-RUN apt-get update && \
-    apt-get install -y software-properties-common && \
-    add-apt-repository -y ppa:deadsnakes/ppa && \
-    apt-get update && \
-    apt install -y python3.8
-
 RUN pip install rdkit
 RUN pip install pandas
 RUN pip install numpy
