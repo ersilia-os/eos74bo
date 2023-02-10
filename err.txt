@@ -821,7 +821,6 @@ Error: Process completed with exit code 1.
 0s
 
 
-
 Sample model id selected: eos74bo
 20:05:52 | DEBUG    | Repo path specified: .
 20:05:52 | DEBUG    | Absolute path: /home/runner/work/eos74bo/eos74bo
@@ -1652,20 +1651,30 @@ Error: Process completed with exit code 1.
 
 
 
-Pip subprocess error:
-ERROR: Could not find a version that satisfies the requirement torch==1.6.0+cpu (from -r /mnt/c/Users/DELL-PC/Desktop/eos/eos74bo/condaenv.055z3i16.requirements.txt (line 4)) (from versions: 1.4.0, 1.5.0, 1.5.1, 1.6.0, 1.7.0, 1.7.1, 1.8.0, 1.8.1, 1.9.0, 1.9.1, 1.10.0, 1.10.1, 1.10.2, 1.11.0, 1.12.0, 1.12.1, 1.13.0, 1.13.1)
-ERROR: No matching distribution found for torch==1.6.0+cpu (from -r /mnt/c/Users/DELL-PC/Desktop/eos/eos74bo/condaenv.055z3i16.requirements.txt (line 4))
-
-failed
-
-CondaEnvException: Pip failed
-
+https://stackoverflow.com/questions/53266350/how-to-tell-pytorch-to-not-use-the-gpu
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+Miquel Duran-Frigola
+7:28 PM
+avoid torch.cuda()
+line 161
 
 
-Pip subprocess error:
-ERROR: Could not find a version that satisfies the requirement torch==1.6.0+cpu (from -r /mnt/c/Users/DELL-PC/Desktop/eos/eos74bo/condaenv.6an0s75d.requirements.txt (line 4)) (from versions: 1.4.0, 1.5.0, 1.5.1, 1.6.0, 1.7.0, 1.7.1, 1.8.0, 1.8.1, 1.9.0, 1.9.1, 1.10.0, 1.10.1, 1.10.2, 1.11.0, 1.12.0, 1.12.1, 1.13.0, 1.13.1)
-ERROR: No matching distribution found for torch==1.6.0+cpu (from -r /mnt/c/Users/DELL-PC/Desktop/eos/eos74bo/condaenv.6an0s75d.requirements.txt (line 4))
+FROM bentoml/model-server:0.11.0-py37
+MAINTAINER ersilia
 
-failed
+RUN pip install rdkit
+RUN pip install pandas
+RUN pip install numpy
+RUN pip install torch==1.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+# RUN pip install torch
+RUN pip install FPSim2
+RUN pip install tqdm
+RUN pip install typing-extensions
+RUN pip install typed-argument-parser
+RUN pip install tensorboardX
+RUN pip install scikit-learn
+RUN pip install hyperopt
+RUN pip install requests
 
-CondaEnvException: Pip failed
+WORKDIR /repo
+COPY . /repo

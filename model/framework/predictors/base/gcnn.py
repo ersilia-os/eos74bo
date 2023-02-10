@@ -2,16 +2,8 @@ from numpy import array
 import numpy as np
 import pandas as pd
 from rdkit.Chem.rdchem import Mol
-
-# import sys
-# import os
-
-# sys.path.insert(0, '../predictors/chemprop')
-# root = os.path.dirname(os.path.abspath(__file__))
-# sys.path.insert(0, os.path.join(root, '../chemprop'))
-
-from chemprop.chemprop.data.utils import get_data, get_data_from_smiles, get_data_from_smiles_with_additional_features
-from chemprop.chemprop.data import MoleculeDataLoader, MoleculeDataset
+from chemprop.data.utils import get_data, get_data_from_smiles, get_data_from_smiles_with_additional_features
+from chemprop.data import MoleculeDataLoader, MoleculeDataset
 from chemprop.train import predict
 from .base import PredictorBase
 #from ..utilities.utilities import get_interpretation

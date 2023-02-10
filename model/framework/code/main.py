@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # imports
 import pandas as pd
 import csv

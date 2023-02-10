@@ -1,9 +1,25 @@
 FROM bentoml/model-server:0.11.0-py37
 MAINTAINER ersilia
 
+RUN apt-get update && \
+    apt-get install -y software-properties-common && \
+    add-apt-repository -y ppa:deadsnakes/ppa && \
+    apt-get update && \
+    apt install -y python3.8
+
 RUN pip install rdkit
 RUN pip install pandas
+RUN pip install numpy
+RUN pip install torch==1.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+# RUN pip install torch
+RUN pip install FPSim2
+RUN pip install tqdm
+RUN pip install typing-extensions
+RUN pip install typed-argument-parser
+RUN pip install tensorboardX
+RUN pip install scikit-learn
+RUN pip install hyperopt
+RUN pip install requests
 
-# /root/miniconda3/envs/eos/bin/python
 WORKDIR /repo
 COPY . /repo

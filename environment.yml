@@ -9,7 +9,6 @@ dependencies:
     - numpy
     - pandas
     - rdkit
-    # - torch==1.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
     - torch
     - FPSim2
     - tqdm
