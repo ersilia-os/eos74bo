@@ -5,11 +5,13 @@ import os
 import sys
 import warnings
 warnings.filterwarnings('ignore')
-root = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(root, "../predictors"))
 
 from pandas import DataFrame
 from numpy import array
+
+root = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(root, "../predictors"))
+
 from solubility import solubility_gcnn_scaler, solubility_gcnn_model, solubility_gcnn_model_version
 from base.gcnn import GcnnBase
 
