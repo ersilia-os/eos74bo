@@ -13,8 +13,9 @@
     "Output Shape": "Single",
     "Interpretation": "Probability of a compound being soluble at 10 μg/mL. (>0.5: Soluble), and probability of a compound being highly soluble (>52 μg/mL; >0.5: Soluble)",
     "Tag": [
-        "solubility",
-        "ADME"
+        "ADME",
+        "Metabolism",
+        "Solubility"
     ],
     "Publication": "https://pubmed.ncbi.nlm.nih.gov/31176566/",
     "Source Code": "https://github.com/ncats/ncats-adme",
