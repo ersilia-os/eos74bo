@@ -43,5 +43,3 @@ Note: Ensure that the Docker service is running.
 4. Change directory to model/checkpoints
 5. Type `python main.py <input-file>.csv <outout-file>.csv` and hit Enter
 6. To close the application, hit `Ctrl + c` or `Cmd + c` in the Terminal and then type `conda deactivate` and hit Enter to close the conda environment
-
-<!-- ersilia -v fetch eos74bo --repo_path eos74bo -->
