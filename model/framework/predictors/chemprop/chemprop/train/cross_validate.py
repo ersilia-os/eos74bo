@@ -1,14 +1,14 @@
 import csv
 from logging import Logger
-import os
 from typing import Tuple
 
+import os
 import numpy as np
 
 from .run_training import run_training
-from chemprop.args import TrainArgs
-from chemprop.data.utils import get_task_names
-from chemprop.utils import create_logger, makedirs
+from .. args import TrainArgs
+from .. data.utils import get_task_names
+from .. utils import create_logger, makedirs
 
 
 def cross_validate(args: TrainArgs, logger: Logger = None) -> Tuple[float, float]:

@@ -1,22 +1,22 @@
-from argparse import Namespace
 import csv
 import logging
 import math
 import os
 import pickle
-from typing import Callable, List, Tuple, Union
-
-from sklearn.metrics import auc, mean_absolute_error, mean_squared_error, precision_recall_curve, r2_score,\
-    roc_auc_score, accuracy_score, log_loss
 import torch
 import torch.nn as nn
+
+from argparse import Namespace
+from typing import Callable, List, Tuple, Union
 from torch.optim import Adam, Optimizer
 from torch.optim.lr_scheduler import _LRScheduler
+from sklearn.metrics import auc, mean_absolute_error, mean_squared_error, precision_recall_curve, r2_score,\
+    roc_auc_score, accuracy_score, log_loss
 
-from chemprop.args import TrainArgs
-from chemprop.data import StandardScaler, MoleculeDataset
-from chemprop.models import MoleculeModel
-from chemprop.nn_utils import NoamLR
+from . args import TrainArgs
+from . data import StandardScaler, MoleculeDataset
+from . models import MoleculeModel
+from . nn_utils import NoamLR
 
 
 def makedirs(path: str, isfile: bool = False):

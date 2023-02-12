@@ -1,20 +1,19 @@
 import math
-from typing import Callable, Dict, List, Set, Tuple
-
 import numpy as np
 import pandas as pd
-from rdkit import Chem
 
-from chemprop.args import InterpretArgs
-from chemprop.data import MoleculeDataLoader, MoleculeDataset
-from chemprop.data.utils import get_data_from_smiles, get_header, get_smiles
-from chemprop.train import predict
-from chemprop.utils import load_args, load_checkpoint, load_scalers
+from rdkit import Chem
+from typing import Callable, Dict, List, Set, Tuple
+
+from . args import InterpretArgs
+from . data import MoleculeDataLoader, MoleculeDataset
+from . data.utils import get_data_from_smiles, get_header, get_smiles
+from . train import predict
+from . utils import load_args, load_checkpoint, load_scalers
 
 
 MIN_ATOMS = 15
 C_PUCT = 10
-
 
 class ChempropModel:
     def __init__(self, args: InterpretArgs) -> None:

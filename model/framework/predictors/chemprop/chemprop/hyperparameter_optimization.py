@@ -1,18 +1,17 @@
 """Optimizes hyperparameters using Bayesian optimization."""
-
-from copy import deepcopy
 import json
-from typing import Dict, Union
 import os
-
-from hyperopt import fmin, hp, tpe
 import numpy as np
 
-from chemprop.args import HyperoptArgs
-from chemprop.models import MoleculeModel
-from chemprop.nn_utils import param_count
-from chemprop.train import cross_validate
-from chemprop.utils import create_logger, makedirs
+from typing import Dict, Union
+from copy import deepcopy
+from hyperopt import fmin, hp, tpe
+
+from . args import HyperoptArgs
+from . models import MoleculeModel
+from . nn_utils import param_count
+from . train import cross_validate
+from . utils import create_logger, makedirs
 
 
 SPACE = {

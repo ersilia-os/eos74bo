@@ -1,14 +1,14 @@
 import csv
 import pickle
-
 import numpy as np
+
 from tqdm import tqdm
 
-from chemprop.args import SklearnPredictArgs, SklearnTrainArgs
-from chemprop.data.utils import get_data
-from chemprop.features import get_features_generator
-from chemprop.sklearn_train import predict
-from chemprop.utils import makedirs
+from . args import SklearnPredictArgs, SklearnTrainArgs
+from . data.utils import get_data
+from . features import get_features_generator
+from . sklearn_train import predict
+from . utils import makedirs
 
 
 def predict_sklearn(args: SklearnPredictArgs):

@@ -1,20 +1,20 @@
-from logging import Logger
 import os
 import pickle
-from pprint import pformat
-from typing import Callable, List, Tuple
-
 import numpy as np
+
+from pprint import pformat
+from logging import Logger
+from typing import Callable, List, Tuple
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.svm import SVC, SVR
 from tqdm import trange, tqdm
 
-from chemprop.args import SklearnTrainArgs
-from chemprop.data import MoleculeDataset
-from chemprop.data.utils import get_data, get_task_names, split_data
-from chemprop.features import get_features_generator
-from chemprop.train.evaluate import evaluate_predictions
-from chemprop.utils import create_logger, get_metric_func, makedirs
+from . args import SklearnTrainArgs
+from . data import MoleculeDataset
+from . features import get_features_generator
+from . utils import create_logger, get_metric_func, makedirs
+from . data.utils import get_data, get_task_names, split_data
+from . train.evaluate import evaluate_predictions
 
 
 def predict(model,

@@ -18,7 +18,6 @@ This data was provided by the National Center for Advancing Translational Scienc
 
 - Input: SMILES
 - Output: SMILES
-
 #
 ## **Source code**
 

@@ -1,8 +1,14 @@
 import torch.nn as nn
 
 from .mpn import MPN
-from chemprop.args import TrainArgs
-from chemprop.nn_utils import get_activation_function, initialize_weights
+# from chemprop.args import TrainArgs
+# from chemprop.nn_utils import get_activation_function, initialize_weights
+
+# root = os.path.dirname(os.path.abspath(__file__))
+# sys.path.append(os.path.join(root, ".."))
+
+from .. args import TrainArgs
+from .. nn_utils import get_activation_function, initialize_weights
 
 
 class MoleculeModel(nn.Module):

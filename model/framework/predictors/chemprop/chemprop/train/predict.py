@@ -1,11 +1,10 @@
-from typing import List
-
 import torch
 import torch.nn as nn
+
+from typing import List
 from tqdm import tqdm
 
-from chemprop.data import MoleculeDataLoader, MoleculeDataset, StandardScaler
-
+from .. data import MoleculeDataLoader, MoleculeDataset, StandardScaler
 
 def predict(model: nn.Module,
             data_loader: MoleculeDataLoader,

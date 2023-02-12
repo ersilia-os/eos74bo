@@ -1,20 +1,16 @@
+import numpy as np
 from collections import OrderedDict
 from functools import partial
 from random import Random
 from typing import Callable, Dict, Iterator, List, Union
-
-import numpy as np
 from torch.utils.data import DataLoader, Dataset, Sampler
 from rdkit import Chem
 
 from .scaler import StandardScaler
-from chemprop.features import get_features_generator
-from chemprop.features import BatchMolGraph, MolGraph
-
+from .. features import get_features_generator, BatchMolGraph, MolGraph
 
 # Cache of graph featurizations
 SMILES_TO_GRAPH: Dict[str, MolGraph] = {}
-
 
 class MoleculeDatapoint:
     """A MoleculeDatapoint contains a single molecule and its associated features and targets."""

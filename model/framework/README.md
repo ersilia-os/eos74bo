@@ -27,7 +27,7 @@ Either docker or conda can be used to run the application. You only have complet
     docker run <name of env>
     ```
 3. Change directory to model/checkpoints
-4. Type `python main.py <input-file>.csv <outout-file>.csv` and hit Enter
+4. Type `python main.py ../input.csv ../<outout-file>.csv` and hit Enter
 Note: Ensure that the Docker service is running.
 
 #

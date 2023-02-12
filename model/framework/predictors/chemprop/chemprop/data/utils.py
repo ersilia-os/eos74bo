@@ -1,20 +1,19 @@
-from collections import OrderedDict
 import csv
-from logging import Logger
+import numpy as np
 import pickle
-from random import Random
-from typing import List, Set, Tuple, Union
 import os
 
+from collections import OrderedDict
+from logging import Logger
+from random import Random
+from typing import List, Set, Tuple, Union
 from rdkit import Chem
-import numpy as np
 from tqdm import tqdm
 
 from .data import MoleculeDatapoint, MoleculeDataset
 from .scaffold import log_scaffold_stats, scaffold_split
-from chemprop.args import PredictArgs, TrainArgs
-from chemprop.features import load_features
-
+from .. args import PredictArgs, TrainArgs
+from .. features import load_features
 
 def get_task_names(path: str,
                    smiles_column: str = None,

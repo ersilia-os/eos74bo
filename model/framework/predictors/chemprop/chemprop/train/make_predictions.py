@@ -1,14 +1,14 @@
 import csv
-from typing import List, Optional, Union
-
 import numpy as np
+
+from typing import List, Optional, Union
 from tqdm import tqdm
 
 from .predict import predict
-from chemprop.args import PredictArgs, TrainArgs
-from chemprop.data import MoleculeDataLoader, MoleculeDataset
-from chemprop.data.utils import get_data, get_data_from_smiles
-from chemprop.utils import load_args, load_checkpoint, load_scalers, makedirs
+from .. args import PredictArgs, TrainArgs
+from .. data import MoleculeDataLoader, MoleculeDataset
+from .. data.utils import get_data, get_data_from_smiles
+from .. utils import load_args, load_checkpoint, load_scalers, makedirs
 
 
 def make_predictions(args: PredictArgs, smiles: List[str] = None) -> List[Optional[List[float]]]:

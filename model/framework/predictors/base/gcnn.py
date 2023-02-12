@@ -1,15 +1,15 @@
-from numpy import array
 import numpy as np
 import pandas as pd
-from rdkit.Chem.rdchem import Mol
-from chemprop.data.utils import get_data, get_data_from_smiles, get_data_from_smiles_with_additional_features
-from chemprop.data import MoleculeDataLoader, MoleculeDataset
-from chemprop.train import predict
-from .base import PredictorBase
-#from ..utilities.utilities import get_interpretation
+from numpy import array
+import datetime
 from typing import Tuple
 from datetime import timezone
-import datetime
+from rdkit.Chem.rdchem import Mol
+
+from chemprop.chemprop.data.utils import get_data_from_smiles, get_data_from_smiles_with_additional_features
+from chemprop.chemprop.data import MoleculeDataLoader, MoleculeDataset
+from chemprop.chemprop.train import predict
+from .base import PredictorBase
 
 class GcnnBase(PredictorBase):
 

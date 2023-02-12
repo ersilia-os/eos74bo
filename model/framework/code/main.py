@@ -1,28 +1,21 @@
-#!/usr/bin/env python
 # imports
+import os
+from os import path
 import pandas as pd
 import csv
-import os
 import sys
-from os import path
 
-# sys.path.append('..')
-# sys.path.insert(0, '..')
 root = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.join(root, ".."))
-
 
 from predictors.solubility.solubility_predictor import SolubilityPredictor 
 from predictors.utilities.utilities import addMolsKekuleSmilesToFrame 
 
 
-# pass the input file
+# parse arguments for the input and output files
 input_file = sys.argv[1]
-# pass the output file
 output_file = sys.argv[2]
 
-
-# predict function for calculating the probability values and model stability
 def predict_df(
     smiles_list, 
     smi_column_name='smiles', 
@@ -69,12 +62,12 @@ def predict_df(
             )
         return response_df
       
-# read SMILES from a .csv file, assuming one column with header
+# read SMILES from .csv file, assuming one column with header
 with open(input_file, "r") as f:
     reader = csv.reader(f)
-    next(reader) # skip header
+    next(reader)  # skip header
     smiles_list = [r[0] for r in reader]
-    
+
 # run model
 output_df = predict_df(smiles_list)
 
@@ -89,10 +82,10 @@ for x in list(output_df[OUTPUT_COLUMN_NAME]):
     else:
         outputs += [1-p]
 print(outputs)
-        
+
 # write output in a .csv file
 with open(output_file, "w", newline="") as f:
     writer = csv.writer(f)
-    writer.writerow(["value"]) # header
+    writer.writerow(["value"])  # header
     for o in outputs:
         writer.writerow([o])

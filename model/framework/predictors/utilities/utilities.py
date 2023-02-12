@@ -1,21 +1,19 @@
 from numpy import array
 from pandas import DataFrame
-from FPSim2 import FPSim2Engine
 import requests
-from tqdm import tqdm
 import os
 import os.path as path
 import tempfile
 import time
+
+from tqdm import tqdm
 from datetime import datetime
 from rdkit import Chem
 from rdkit.Chem.rdchem import Mol
 
-import sys
-sys.path.insert(0, '../predictors/chemprop')
-from chemprop.utils import load_checkpoint, load_scalers
-from chemprop.args import InterpretArgs
-from chemprop.interpret import interpret
+from chemprop.chemprop.utils import load_checkpoint, load_scalers
+from chemprop.chemprop.args import InterpretArgs
+from chemprop.chemprop.interpret import interpret
 
 
 def get_processed_smi(rdkit_mols: array) -> array:
@@ -107,21 +105,21 @@ def load_gcnn_model_with_versioninfo(model_file_path, model_file_url):
 
     return gcnn_scaler, gcnn_model, model_timestamp
 
-def get_similar_mols(kekule_smiles: list, model: str):
-    start = time.time()
+# def get_similar_mols(kekule_smiles: list, model: str):
+#     start = time.time()
 
-    sim_vals = []
-    fp_dict_path = ''.join(['./train_data/', model, '.h5'])
-    fp_dict_path = path.abspath(path.join(os.getcwd(), fp_dict_path))
-    fp_engine = FPSim2Engine(fp_dict_path)
-    for smi in kekule_smiles:
-        res = fp_engine.on_disk_similarity(smi, 0.01)
-        sim_vals.append(res[0][1])
+#     sim_vals = []
+#     fp_dict_path = ''.join(['./train_data/', model, '.h5'])
+#     fp_dict_path = path.abspath(path.join(os.getcwd(), fp_dict_path))
+#     fp_engine = FPSim2Engine(fp_dict_path)
+#     for smi in kekule_smiles:
+#         res = fp_engine.on_disk_similarity(smi, 0.01)
+#         sim_vals.append(res[0][1])
 
-    end = time.time()
-    print(f'{end - start} seconds to calculate Tanimoto similarity for {len(kekule_smiles)} molecules')
+#     end = time.time()
+#     print(f'{end - start} seconds to calculate Tanimoto similarity for {len(kekule_smiles)} molecules')
 
-    return sim_vals
+#     return sim_vals
 
 def get_interpretation(kekule_smiles, model):
 

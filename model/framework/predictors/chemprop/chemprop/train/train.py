@@ -1,16 +1,16 @@
 import logging
-from typing import Callable
-
-from tensorboardX import SummaryWriter
 import torch
 import torch.nn as nn
+
+from tensorboardX import SummaryWriter
+from typing import Callable
 from torch.optim import Optimizer
 from torch.optim.lr_scheduler import _LRScheduler
 from tqdm import tqdm
 
-from chemprop.args import TrainArgs
-from chemprop.data import MoleculeDataLoader, MoleculeDataset
-from chemprop.nn_utils import compute_gnorm, compute_pnorm, NoamLR
+from .. args import TrainArgs
+from .. data import MoleculeDataLoader, MoleculeDataset
+from .. nn_utils import compute_gnorm, compute_pnorm, NoamLR
 
 
 def train(model: nn.Module,
