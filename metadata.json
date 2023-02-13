@@ -1,4 +1,4 @@
-{
+{    
     "Identifier": "eos74bo",
     "Slug": "aqueous-kinetic-solubility",
     "Status": "In progress",
@@ -13,10 +13,10 @@
     "Output Shape": "Single",
     "Interpretation": "Probability of a compound being soluble at 10 μg/mL. (>0.5: Soluble), and probability of a compound being highly soluble (>52 μg/mL; >0.5: Soluble)",
     "Tag": [
-        "solubility",
-        "ADME"
+        "ADME",
+        "Solubility"
     ],
-    "Publication": "https://pubmed.ncbi.nlm.nih.gov/31176566/",
+    "Publication": "https://slas-discovery.org/article/S2472-5552(22)06765-X/fulltext",
     "Source Code": "https://github.com/ncats/ncats-adme",
     "License": "None"
 }

@@ -1,0 +1,21 @@
+// {    
+//     "Identifier": "eos74bo",
+//     "Slug": "aqueous-kinetic-solubility",
+//     "Status": "In progress",
+//     "Title": "Aqueous Kinetic Solubility",
+//     "Description": "Prediction of Aqueous solubility is one of the most important properties in drug discovery, as it has profound impact on various drug properties, including biological activity, pharmacokinetics (PK), toxicity, and in vivo efficacy.",
+//     "Mode": "Pretrained",
+//     "Task": ["Classification"],
+//     "Input": ["Compound"],
+//     "Input Shape": "Single",
+//     "Output": ["Probability"],
+//     "Output Type": ["Float"],
+//     "Output Shape": "Single",
+//     "Interpretation": "Probability of a compound being soluble at 10 μg/mL. (>0.5: Soluble), and probability of a compound being highly soluble (>52 μg/mL; >0.5: Soluble)",
+//     "Tag": [
+//         "Solubility"
+//     ],
+//     "Publication": "https://slas-discovery.org/article/S2472-5552(22)06765-X/fulltext",
+//     "Source Code": "https://github.com/ncats/ncats-adme",
+//     "License": "None"
+// }
