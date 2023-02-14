@@ -1,12 +1,12 @@
-from collections import defaultdict
+import numpy as np
 import logging
+
+from collections import defaultdict
 from random import Random
 from typing import Dict, List, Set, Tuple, Union
-
 from rdkit import Chem
 from rdkit.Chem.Scaffolds import MurckoScaffold
 from tqdm import tqdm
-import numpy as np
 
 from .data import MoleculeDataset
 

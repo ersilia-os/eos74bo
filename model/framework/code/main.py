@@ -1,6 +1,5 @@
 # imports
 import os
-from os import path
 import pandas as pd
 import csv
 import sys
@@ -12,9 +11,11 @@ from predictors.solubility.solubility_predictor import SolubilityPredictor
 from predictors.utilities.utilities import addMolsKekuleSmilesToFrame 
 
 
-# parse arguments for the input and output files
+# pass the input file
 input_file = sys.argv[1]
+# pass the output file
 output_file = sys.argv[2]
+
 
 def predict_df(
     smiles_list, 
@@ -29,9 +30,7 @@ def predict_df(
     working_df = working_df[~working_df['mols'].isnull() & ~working_df['kekule_smiles'].isnull()] 
 
     for model in models:
-        response[model] = {}
-        error_messages = []
-        
+        response[model] = {}        
         if model.lower() == 'solubility': 
             predictor = SolubilityPredictor(
                 kekule_smiles = working_df['kekule_smiles'].values, 
@@ -70,6 +69,7 @@ with open(input_file, "r") as f:
 
 # run model
 output_df = predict_df(smiles_list)
+print(output_df)
 
 OUTPUT_COLUMN_NAME = "Predicted Class (Probability)"
 

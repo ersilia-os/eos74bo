@@ -1,11 +1,11 @@
-from numpy import array
-from pandas import DataFrame
 import requests
 import os
 import os.path as path
 import tempfile
 import time
 
+from numpy import array
+from pandas import DataFrame
 from tqdm import tqdm
 from datetime import datetime
 from rdkit import Chem
@@ -76,9 +76,7 @@ def load_gcnn_model(model_file_path, model_file_url):
         with open(model_file_path, 'wb') as gcnn_scaler_file:
             gcnn_scaler_file.write(gcnn_scaler_request.content)
         gcnn_scaler, _ = load_scalers(model_file_path)
-
     gcnn_model = load_checkpoint(model_file_path)
-
     return gcnn_scaler, gcnn_model
 
 def load_gcnn_model_with_versioninfo(model_file_path, model_file_url):
@@ -100,29 +98,12 @@ def load_gcnn_model_with_versioninfo(model_file_path, model_file_url):
         gcnn_scaler, _ = load_scalers(model_file_path)
 
     gcnn_model = load_checkpoint(model_file_path)
-
-    model_timestamp = datetime.fromtimestamp(os.path.getctime(model_file_path)).strftime('%Y-%m-%d') # get model file creation timestamp
-
+    
+    # get model file creation timestamp
+    model_timestamp = datetime.fromtimestamp(os.path.getctime(model_file_path)).strftime('%Y-%m-%d')
     return gcnn_scaler, gcnn_model, model_timestamp
 
-# def get_similar_mols(kekule_smiles: list, model: str):
-#     start = time.time()
-
-#     sim_vals = []
-#     fp_dict_path = ''.join(['./train_data/', model, '.h5'])
-#     fp_dict_path = path.abspath(path.join(os.getcwd(), fp_dict_path))
-#     fp_engine = FPSim2Engine(fp_dict_path)
-#     for smi in kekule_smiles:
-#         res = fp_engine.on_disk_similarity(smi, 0.01)
-#         sim_vals.append(res[0][1])
-
-#     end = time.time()
-#     print(f'{end - start} seconds to calculate Tanimoto similarity for {len(kekule_smiles)} molecules')
-
-#     return sim_vals
-
 def get_interpretation(kekule_smiles, model):
-
     start = time.time()
 
     with tempfile.NamedTemporaryFile(delete=True) as temp:

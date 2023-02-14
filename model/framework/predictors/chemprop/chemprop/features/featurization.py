@@ -1,7 +1,8 @@
-from typing import List, Tuple, Union
-
-from rdkit import Chem
 import torch
+
+from typing import List, Tuple, Union
+from rdkit import Chem
+
 
 # Atom feature sizes
 MAX_ATOMIC_NUM = 100

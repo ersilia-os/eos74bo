@@ -1,9 +1,9 @@
 import csv
-from logging import Logger
-from typing import Tuple
-
 import os
 import numpy as np
+
+from logging import Logger
+from typing import Tuple
 
 from .run_training import run_training
 from .. args import TrainArgs

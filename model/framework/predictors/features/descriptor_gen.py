@@ -1,7 +1,6 @@
-#!/usr/bin/env python
+import numpy as np
 
 from rdkit import Chem, DataStructs
-import numpy as np
 from rdkit.Chem import AllChem
 
 class DescriptorGen:

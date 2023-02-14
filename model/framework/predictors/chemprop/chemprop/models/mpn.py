@@ -1,18 +1,9 @@
-from typing import List, Union
-
 import numpy as np
-from rdkit import Chem
 import torch
 import torch.nn as nn
-import os
-import sys
 
-# root = os.path.dirname(os.path.abspath(__file__))
-# sys.path.append(os.path.join(root, ".."))
-
-# from chemprop.args import TrainArgs
-# from chemprop.features import BatchMolGraph, get_atom_fdim, get_bond_fdim, mol2graph
-# from chemprop.nn_utils import index_select_ND, get_activation_function
+from typing import List, Union
+from rdkit import Chem
 
 from .. args import TrainArgs
 from .. features import BatchMolGraph, get_atom_fdim, get_bond_fdim, mol2graph

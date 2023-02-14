@@ -1,8 +1,8 @@
 from typing import Callable, List, Union
-
-import numpy as np
 from rdkit import Chem, DataStructs
 from rdkit.Chem import AllChem
+
+import numpy as np
 
 
 Molecule = Union[str, Chem.Mol]

@@ -1,10 +1,10 @@
 import numpy as np
 import pandas as pd
-from numpy import array
 import datetime
+
 from typing import Tuple
 from datetime import timezone
-from rdkit.Chem.rdchem import Mol
+from numpy import array
 
 from chemprop.chemprop.data.utils import get_data_from_smiles, get_data_from_smiles_with_additional_features
 from chemprop.chemprop.data import MoleculeDataLoader, MoleculeDataset
@@ -128,7 +128,8 @@ class GcnnBase(PredictorBase):
             np.where(predictions >= 0.5, 
                      predictions, 
                      (1 - predictions)
-                     )).round(1).astype(str) + ')').str.replace('(nan)', '', regex=False)
+                    #  )).round(2).astype(str) + ')').str.replace('(nan)', '', regex=False)
+                    )).astype(str) + ')').str.replace('(nan)', '', regex=False)
         if len(self.predictions_df.index) > len(predictions) or np.ma.count_masked(predictions) > 0:
             self.model_errors.append('graph convolutional neural network')
             self.has_errors = True

@@ -1,9 +1,9 @@
 import csv
 import os
 import pickle
-from typing import List
-
 import numpy as np
+
+from typing import List
 
 
 def save_features(path: str, features: List[np.ndarray]):
