@@ -31,7 +31,7 @@ class SolubilityPredictor(GcnnBase):
         smiles: array = None
         ):
         """
-        Constructor for RLMPredictior class
+        Constructor for SolubilityPredictior class
 
         Parameters:
             kekule_smiles (Array): numpy array of RDkit molecules
