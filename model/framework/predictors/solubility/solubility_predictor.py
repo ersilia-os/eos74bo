@@ -17,16 +17,22 @@ from base.gcnn import GcnnBase
 
 class SolubilityPredictor(GcnnBase):
     """
-    Makes Solubility stability preditions
+    Makes RLM stability preditions
+
     Attributes:
         df (DataFrame): DataFrame containing column with smiles
         smiles_column_index (int): index of column containing smiles
         predictions_df (DataFrame): DataFrame hosting all predictions
     """
 
-    def __init__(self, kekule_smiles: array = None, smiles: array = None):
+    def __init__(
+        self, 
+        kekule_smiles: array = None, 
+        smiles: array = None
+        ):
         """
-        Constructor for SolubilityPredictor class
+        Constructor for RLMPredictior class
+
         Parameters:
             kekule_smiles (Array): numpy array of RDkit molecules
         """
@@ -58,18 +64,14 @@ class SolubilityPredictor(GcnnBase):
         if len(self.kekule_smiles) > 0:
 
             start = time.time()
-            gcnn_predictions, gcnn_labels = self.gcnn_predict(
-                solubility_gcnn_model, 
-                solubility_gcnn_scaler
-                )
+            gcnn_predictions, gcnn_labels = self.gcnn_predict(solubility_gcnn_model, solubility_gcnn_scaler)
             end = time.time()
             print(f'Solubility: {end - start} seconds to predict {len(self.predictions_df.index)} molecules')
 
             self.predictions_df['Prediction'] = pd.Series(
-                pd.Series(np.where(
-                    gcnn_predictions>=0.5, 'low solubility', 'high solubility'))
+                pd.Series(np.where(gcnn_predictions>=0.5, 'low solubility', 'high solubility'))
             )
-            print(self.predictions_df)
+
         return self.predictions_df
 
     def get_model_version(self) -> str:

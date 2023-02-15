@@ -7,8 +7,6 @@ import sys
 root = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.join(root, ".."))
 
-from os import path
-
 from predictors.solubility.solubility_predictor import SolubilityPredictor 
 from predictors.utilities.utilities import addMolsKekuleSmilesToFrame 
 
@@ -32,9 +30,7 @@ def predict_df(
     working_df = working_df[~working_df['mols'].isnull() & ~working_df['kekule_smiles'].isnull()] 
 
     for model in models:
-        response[model] = {}
-        error_messages = []
-        
+        response[model] = {}        
         if model.lower() == 'solubility': 
             predictor = SolubilityPredictor(
                 kekule_smiles = working_df['kekule_smiles'].values, 
@@ -73,6 +69,7 @@ with open(input_file, "r") as f:
 
 # run model
 output_df = predict_df(smiles_list)
+print(output_df)
 
 OUTPUT_COLUMN_NAME = "Predicted Class (Probability)"
 
