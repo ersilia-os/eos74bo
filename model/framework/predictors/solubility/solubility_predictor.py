@@ -69,7 +69,7 @@ class SolubilityPredictor(GcnnBase):
             print(f'Solubility: {end - start} seconds to predict {len(self.predictions_df.index)} molecules')
 
             self.predictions_df['Prediction'] = pd.Series(
-                pd.Series(np.where(gcnn_predictions>=0.5, 'low solubility', 'high solubility'))
+                pd.Series(np.where(gcnn_predictions >=0.5, 'low solubility', 'high solubility'))
             )
 
         return self.predictions_df
