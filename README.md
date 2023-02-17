@@ -15,7 +15,7 @@ Prediction of Aqueous solubility is one of the most important properties in drug
 * Output: `Probability`
 * Output Type: `Float`
 * Output Shape: `Single`
-* Interpretation: Probability of a compound being soluble at 10 μg/mL. (>0.5: Soluble), and probability of a compound being highly soluble (>52 μg/mL; >0.5: Soluble)
+* Interpretation: It is a classification model which returns the probability of a compound having poor solublibity (>=0.5: low solubility), and probability of a compound being highly soluble (<0.5: high solubility)
 
 ## References
 

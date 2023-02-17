@@ -69,7 +69,7 @@ with open(input_file, "r") as f:
 
 # run model
 output_df = predict_df(smiles_list)
-print(output_df)
+# print(output_df)
 
 OUTPUT_COLUMN_NAME = "Predicted Class (Probability)"
 
@@ -78,14 +78,18 @@ for x in list(output_df[OUTPUT_COLUMN_NAME]):
     c = int(x.split(" ")[0])
     p = float(x.split("(")[1].split(")")[0])
     if c == 1:
-        outputs += [p]
+        outputs.append(p)
     else:
-        outputs += [1-p]
-print(outputs)
+        outputs.append(1-p)
+
+# add a new column 'Probabilities' to the output_df
+output_df['proba1'] = outputs
+print(output_df)
 
 # write output in a .csv file
 with open(output_file, "w", newline="") as f:
+    selected_columns = ['proba1']
     writer = csv.writer(f)
-    writer.writerow(["value"])  # header
+    writer.writerow(["proba1"])  # header
     for o in outputs:
         writer.writerow([o])
