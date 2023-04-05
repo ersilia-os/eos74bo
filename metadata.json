@@ -1,7 +1,7 @@
 {    
     "Identifier": "eos74bo",
     "Slug": "ncats-solubility",
-    "Status": "In progress",
+    "Status": "Ready",
     "Title": "Aqueous Kinetic Solubility",
     "Description": "Kinetic aqueous solubility (μg/mL) was experimentally determined using the same SOP in over 200 NCATS drug discovery projects. A final dataset of 11780 non-redundant molecules and their associated solubility was used to train a SVM classifier. Approximately half of the dataset has poor solubility (< 10 μg/mL), and two-thirds of these low soluble molecules report values of < 1 μg/mL. A subset of the data used is available at PubChem (AID 1645848).",
     "Mode": "Pretrained",

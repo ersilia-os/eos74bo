@@ -1,11 +1,11 @@
 # Aqueous Kinetic Solubility
 
-Kinetic aqueous solubility (μg/mL) was experimentally determined using the same SOP in over 200 NCATS drug discovery projects. A final dataset of 11780 non-redundant molecules and their associated solubility was used to train a SVM classifier. Approximately half of the dataset has poor solubility (< 10 μg/mL), and two-thirds of these low soluble molecules report values of < 1 μg/mL.
+Kinetic aqueous solubility (μg/mL) was experimentally determined using the same SOP in over 200 NCATS drug discovery projects. A final dataset of 11780 non-redundant molecules and their associated solubility was used to train a SVM classifier. Approximately half of the dataset has poor solubility (< 10 μg/mL), and two-thirds of these low soluble molecules report values of < 1 μg/mL. A subset of the data used is available at PubChem (AID 1645848).
 
 ## Identifiers
 
 * EOS model ID: `eos74bo`
-* Slug: `aqueous-kinetic-solubility`
+* Slug: `ncats-solubility`
 
 ## Characteristics
 
@@ -15,7 +15,7 @@ Kinetic aqueous solubility (μg/mL) was experimentally determined using the same
 * Output: `Probability`
 * Output Type: `Float`
 * Output Shape: `Single`
-* Interpretation: It is a classification model which returns the probability of a compound having poor solublibity (>=0.5: low solubility), and probability of a compound being highly soluble (<0.5: high solubility)
+* Interpretation: Probability of a compound having poor solublibity (< 10 µg/ml), and probability of a compound being highly soluble (<0.5: high solubility)
 
 ## References
 
