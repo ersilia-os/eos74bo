@@ -15,7 +15,7 @@ Kinetic aqueous solubility (μg/mL) was experimentally determined using the same
 * Output: `Probability`
 * Output Type: `Float`
 * Output Shape: `Single`
-* Interpretation: Probability of a compound having poor solublibity (< 10 µg/ml), and probability of a compound being highly soluble (<0.5: high solubility)
+* Interpretation: Probability of a compound having poor solublibity (< 10 µg/ml)
 
 ## References
 
