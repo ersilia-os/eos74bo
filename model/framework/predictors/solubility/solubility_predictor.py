@@ -71,8 +71,10 @@ class SolubilityPredictor(GcnnBase):
             self.predictions_df['Prediction'] = pd.Series(
                 pd.Series(np.where(gcnn_predictions >=0.5, 'low solubility', 'high solubility'))
             )
+            proba1_df = pd.DataFrame()
+            proba1_df["sol_proba1"] = pd.Series(np.around(gcnn_predictions, 3))
 
-        return self.predictions_df
+        return proba1_df
 
     def get_model_version(self) -> str:
         return self.model_version
