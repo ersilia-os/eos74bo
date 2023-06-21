@@ -23,6 +23,11 @@ Kinetic aqueous solubility (μg/mL) was experimentally determined using the same
 * [Source Code](https://github.com/ncats/ncats-adme)
 * Ersilia contributor: [pauline-banye](https://github.com/pauline-banye)
 
+## Ersilia model URLs
+* [GitHub](https://github.com/ersilia-os/eos74bo)
+* [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos74bo.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos74bo) (AMD64)
+
 ## Citation
 
 If you use this model, please cite the [original authors](https://slas-discovery.org/article/S2472-5552(22)06765-X/fulltext) of the model and the [Ersilia Model Hub](https://github.com/ersilia-os/ersilia/blob/master/CITATION.cff).
