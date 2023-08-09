@@ -90,7 +90,7 @@ class Model(object):
             R = []
             for r in reader:
                 R += [
-                    {"outcome": [Float(x) for x in r]}
+                    {"outcome": Float(r[0])}
                 ]  # <-- EDIT: Modify according to type of output (Float, String...)
         meta = {"outcome": h}
         result = {"result": R, "meta": meta}
