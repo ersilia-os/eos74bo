@@ -91,7 +91,7 @@ class Model(object):
             for r in reader:
                 R += [
                     {"outcome": Float(r[0])}
-                ]  # <-- EDIT: Modify according to type of output (Float, String...)
+                ]  
         meta = {"outcome": h}
         result = {"result": R, "meta": meta}
         shutil.rmtree(tmp_folder)
