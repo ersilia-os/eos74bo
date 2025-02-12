@@ -1,0 +1,2 @@
+name,type,direction,description
+sol_proba,float,high,Probability of the compound to have poor solubility (less than 10 ug/ML)
