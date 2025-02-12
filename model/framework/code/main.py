@@ -39,4 +39,5 @@ with open(input_file, "r") as f:
 
 # run model
 output_df = my_model(smiles_list)
+output_df.rename(columns={"outcome":"sol_proba"}, inplace=True)
 output_df.to_csv(output_file, index=False)
