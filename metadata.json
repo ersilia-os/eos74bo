@@ -3,33 +3,44 @@
     "Slug": "ncats-solubility",
     "Status": "Ready",
     "Title": "Aqueous Kinetic Solubility",
-    "Description": "Kinetic aqueous solubility (\u03bcg/mL) was experimentally determined using the same SOP in over 200 NCATS drug discovery projects. A final dataset of 11780 non-redundant molecules and their associated solubility was used to train a SVM classifier. Approximately half of the dataset has poor solubility (< 10 \u03bcg/mL), and two-thirds of these low soluble molecules report values of < 1 \u03bcg/mL. A subset of the data used is available at PubChem (AID 1645848).",
-    "Mode": "Pretrained",
-    "Task": [
-        "Classification"
-    ],
+    "Description": "Kinetic aqueous solubility (\u03bcg/mL) was experimentally determined using the same SOP in over 200 NCATS drug discovery projects. A final dataset of 11780 non-redundant molecules and their associated solubility was used to train a SVM classifier. Approximately half of the dataset has poor solubility (< 10 \u03bcg/mL), and two-thirds of these low soluble molecules report values of < 1 \u03bcg/mL. A subset of the data used is available at PubChem (AID 1645848).\n",
+    "Source": "Local",
+    "Source Type": "External",
     "Input": [
         "Compound"
     ],
-    "Input Shape": "Single",
+    "Input Dimension": 1,
+    "Task": "Annotation",
+    "Subtask": "Property calculation or prediction",
+    "Biomedical Area": [
+        "ADMET"
+    ],
+    "Target Organism": [
+        "Not Applicable"
+    ],
     "Output": [
         "Probability"
     ],
-    "Output Type": [
-        "Float"
-    ],
-    "Output Shape": "Single",
-    "Interpretation": "Probability of a compound having poor solublibity (< 10 \u00b5g/ml)",
+    "Output Dimension": 1,
+    "Output Consistency": "Fixed",
+    "Interpretation": "Probability of a compound having poor solubilibity (< 10 \u00b5g/ml)",
     "Tag": [
         "ADME",
         "Solubility"
     ],
     "Publication": "https://slas-discovery.org/article/S2472-5552(22)06765-X/fulltext",
+    "Publication Type": "Peer reviewed",
+    "Publication Year": 2021,
     "Source Code": "https://github.com/ncats/ncats-adme",
     "License": "None",
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos74bo.zip",
+    "Contributor": "pauline-banye",
+    "Incorporation Date": "2023-01-31",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos74bo",
     "Docker Architecture": [
         "AMD64"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos74bo.zip",
+    "Deployment": [
+        "Local"
     ]
 }
