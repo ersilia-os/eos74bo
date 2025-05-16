@@ -25,12 +25,6 @@ This model was incorporated on 2023-01-31.
 - **Output Consistency:** `Fixed`
 - **Interpretation:** Probability of a compound having poor solubilibity (< 10 µg/ml)
 
-Below are the **Output Columns** of the model:
-| Name | Type | Direction | Description |
-|------|------|-----------|-------------|
-| sol_proba | float | high | Probability of the compound to have poor solubility (less than 10 ug/ML) |
-
-
 ### Source and Deployment
 - **Source:** `Local`
 - **Source Type:** `External`
@@ -39,6 +33,8 @@ Below are the **Output Columns** of the model:
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos74bo.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos74bo.zip)
 
 ### Resource Consumption
+- **Model Size (Mb):** `85`
+- **Environment Size (Mb):** `2447`
 
 
 ### References
