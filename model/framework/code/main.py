@@ -14,7 +14,7 @@ from predictors.utilities.utilities import addMolsKekuleSmilesToFrame
 
 input_file = sys.argv[1]
 output_file = sys.argv[2]
-
+output_file = output_file.strip()
 
 
 def my_model(smiles_list):
