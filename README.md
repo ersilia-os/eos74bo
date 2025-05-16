@@ -35,13 +35,18 @@ Below are the **Output Columns** of the model:
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos74bo](https://hub.docker.com/r/ersiliaos/eos74bo)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos74bo.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos74bo.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `85`
 - **Environment Size (Mb):** `2447`
+- **Image Size (Mb):** `2510.4`
 
+**Computational Performance (seconds):**
+- 10 inputs: `33.92`
+- 100 inputs: `24.45`
+- 10000 inputs: `459.71`
 
 ### References
 - **Source Code**: [https://github.com/ncats/ncats-adme](https://github.com/ncats/ncats-adme)
