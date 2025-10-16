@@ -4,6 +4,7 @@ Kinetic aqueous solubility (μg/mL) was experimentally determined using the same
 
 This model was incorporated on 2023-01-31.
 
+
 ## Information
 ### Identifiers
 - **Ersilia Identifier:** `eos74bo`
@@ -13,7 +14,7 @@ This model was incorporated on 2023-01-31.
 - **Task:** `Annotation`
 - **Subtask:** `Property calculation or prediction`
 - **Biomedical Area:** `ADMET`
-- **Target Organism:** `Not Applicable`
+- **Target Organism:** `Any`
 - **Tags:** `ADME`, `Solubility`
 
 ### Input
