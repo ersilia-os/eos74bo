@@ -38,6 +38,8 @@
     "License": "None",
     "Contributor": "pauline-banye",
     "Incorporation Date": "2023-01-31",
+    "Last Packaging Date": "2025-10-28",
+    "Release": "v1.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos74bo.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos74bo",
     "Docker Architecture": [
@@ -46,10 +48,10 @@
     ],
     "Model Size": 85.0,
     "Environment Size": 2460.0,
-    "Image Size": 2510.4,
-    "Computational Performance 1": 33.92,
-    "Computational Performance 2": 23.62,
-    "Computational Performance 3": 24.45,
-    "Computational Performance 4": 103.49,
-    "Computational Performance 5": 459.71
+    "Image Size": 2592.77,
+    "Computational Performance 1": 28.97,
+    "Computational Performance 2": 19.11,
+    "Computational Performance 3": 18.91,
+    "Computational Performance 4": 36.73,
+    "Computational Performance 5": 112.83
 }
