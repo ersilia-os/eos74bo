@@ -2,8 +2,7 @@
 
 Kinetic aqueous solubility (μg/mL) was experimentally determined using the same SOP in over 200 NCATS drug discovery projects. A final dataset of 11780 non-redundant molecules and their associated solubility was used to train a SVM classifier. Approximately half of the dataset has poor solubility (< 10 μg/mL), and two-thirds of these low soluble molecules report values of < 1 μg/mL. A subset of the data used is available at PubChem (AID 1645848).
 
-This model was incorporated on 2023-01-31.
-
+This model was incorporated on 2023-01-31.Last packaged on 2025-10-28.
 
 ## Information
 ### Identifiers
@@ -42,12 +41,12 @@ Below are the **Output Columns** of the model:
 ### Resource Consumption
 - **Model Size (Mb):** `85`
 - **Environment Size (Mb):** `2460`
-- **Image Size (Mb):** `2510.4`
+- **Image Size (Mb):** `2592.77`
 
 **Computational Performance (seconds):**
-- 10 inputs: `33.92`
-- 100 inputs: `24.45`
-- 10000 inputs: `459.71`
+- 10 inputs: `28.97`
+- 100 inputs: `18.91`
+- 10000 inputs: `112.83`
 
 ### References
 - **Source Code**: [https://github.com/ncats/ncats-adme](https://github.com/ncats/ncats-adme)
