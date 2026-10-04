@@ -1,6 +1,6 @@
 # Aqueous Kinetic Solubility
 
-Kinetic aqueous solubility (μg/mL) was experimentally determined using the same SOP in over 200 NCATS drug discovery projects. A final dataset of 11780 non-redundant molecules and their associated solubility was used to train a SVM classifier. Approximately half of the dataset has poor solubility (< 10 μg/mL), and two-thirds of these low soluble molecules report values of < 1 μg/mL. A subset of the data used is available at PubChem (AID 1645848).
+Judges whether a compound will prove poorly soluble in aqueous kinetic assay conditions, the format used in screening where a DMSO stock is diluted into buffer. Sun and colleagues at NCATS assembled an unusually consistent dataset by measuring solubility in house under a single protocol, avoiding the scatter that plagues collections merged from many sources. The positive class covers compounds below 10 ug/mL, a threshold at which screening artefacts and unreliable potency measurements become common.
 
 This model was incorporated on 2023-01-31.Last packaged on 2025-10-28.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2023-01-31.Last packaged on 2025-10-28.
 ### Output
 - **Output Dimension:** `1`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Probability of a compound having poor solubilibity (< 10 µg/ml)
+- **Interpretation:** Probability that a compound has poor aqueous solubility, defined as below 10 ug/mL.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
