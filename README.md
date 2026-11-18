@@ -2,7 +2,8 @@
 
 Flags compounds likely to be poorly soluble under kinetic assay conditions, where a DMSO stock is diluted into pH 7.4 buffer, the regime that matters when screening hits are triaged. Sun and co-workers at NCATS measured 11,780 non-redundant compounds from more than 200 intramural projects under a single standard operating procedure, then trained a support vector classifier on atom-type descriptors, reaching 0.93 AUC-ROC on held-out data at the 10 ug/mL cut-off. About half the collection is poorly soluble, and a subset of the measurements is deposited in PubChem.
 
-This model was incorporated on 2023-01-31.Last packaged on 2025-10-28.
+This model was incorporated on 2023-01-31.
+Last packaged on 2025-10-28.
 
 ## Information
 ### Identifiers
@@ -37,6 +38,7 @@ Below are the **Output Columns** of the model:
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos74bo](https://hub.docker.com/r/ersiliaos/eos74bo)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos74bo.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos74bo.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos74bo_v1.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos74bo_v1.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `85`
